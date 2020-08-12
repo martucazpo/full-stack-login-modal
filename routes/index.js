@@ -20,7 +20,7 @@ router.get('/landing/:id', ensureAuthenticated, (req, res) => {
             let name = data.name;
             let email = data.email;
             let id = data._id;
-            res.render('layouts/landing', {
+            res.render('layouts/login/landing', {
                 name,
                 email,
                 id
@@ -28,6 +28,7 @@ router.get('/landing/:id', ensureAuthenticated, (req, res) => {
         }
     });
 });
+
 router.get('/', (req, res) => {
     res.render('layouts/form');
 });

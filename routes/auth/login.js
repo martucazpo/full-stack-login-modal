@@ -26,7 +26,7 @@ router.get('/dashboard', ensureAuthenticated, async (req, res) => {
         } else {
             let name = data.name;
             let id = data._id;
-            res.render('layouts/username', {
+            res.render('layouts/login/username', {
                 name: name,
                 id: id
             });

@@ -15,7 +15,7 @@ router.get('/update/:id', ensureAuthenticated, (req, res) => {
         if (err) {
             console.log(err);
         } else {
-            res.render('layouts/update-profile', {
+            res.render('layouts/login/update-profile', {
                 id: id
             });
         }
@@ -38,7 +38,7 @@ router.post('/update/:id', ensureAuthenticated, async (req, res) => {
                 let id = data._id;
                 let name = data.name;
                 let email = data.email;
-                res.render('layouts/landing', {
+                res.render('layouts/login/landing', {
                     id,
                     name,
                     email
@@ -63,7 +63,7 @@ router.post('/update/:id', ensureAuthenticated, async (req, res) => {
                 let id = data._id;
                 let name = data.name;
                 let email = data.email;
-                res.render('layouts/new-profile', {
+                res.render('layouts/login/new-profile', {
                     id,
                     name,
                     email
@@ -88,7 +88,7 @@ router.post('/update/:id', ensureAuthenticated, async (req, res) => {
                 let id = data._id;
                 let name = data.name;
                 let email = data.email;
-                res.render('layouts/new-profile', {
+                res.render('layouts/login/new-profile', {
                     id,
                     name,
                     email
@@ -112,7 +112,7 @@ router.post('/update/:id', ensureAuthenticated, async (req, res) => {
                 let id = data._id;
                 let name = data.name;
                 let email = data.email;
-                res.render('layouts/new-profile', {
+                res.render('layouts/login/new-profile', {
                     id,
                     name,
                     email

@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const User = require('../../models/User');
 
 router.get('/register', (req, res) => {
-    res.render('layouts/register');
+    res.render('layouts/login/register');
 });
 
 router.post('/register', async (req, res) => {
@@ -21,7 +21,7 @@ router.post('/register', async (req, res) => {
     if (errors.length > 0) {
         //fails if error
         //This will render a partial ejs
-        res.render('layouts/register', {
+        res.render('layouts/login/register', {
             errors
         });
     } else {
@@ -38,7 +38,7 @@ router.post('/register', async (req, res) => {
                 errors.push({
                     message: "This email is already registered"
                 })
-                res.render('layouts/register', {
+                res.render('layouts/login/register', {
                     errors
                 });
             } else {
