@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const CatFancier = require('../models/CatFancier');
+const User = require('../models/User');
 
 router.get('/name/:id', (req, res) => {
     let id = req.params.id;
@@ -27,10 +28,17 @@ router.post('/name/:id', (req, res) => {
                     console.log(err);
                 } else {
                     let id = data._id;
+                    let user_id = data.user_id;
                     let name = data.name;
                     let age = data.age;
                     let fci = data.favoriteCatImg;
-                    res.render('layouts/third-page.ejs', { name, id, age, fci });
+                    User.findByIdAndUpdate({ _id : user_id },{ $set: { name: name }}, { new: true }, (err, data) => {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            res.render('layouts/third-page.ejs', { name, id, age, fci });
+                        }
+                    });
                 }
             });
         }
