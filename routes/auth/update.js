@@ -122,20 +122,4 @@ router.post('/update/:id', ensureAuthenticated, async (req, res) => {
     }
 });
 
-//removes user
-router.get('/removeUser/:id', ensureAuthenticated, (req, res) => {
-    let id = req.params.id;
-    User.findByIdAndRemove({
-        _id: id
-    }, (err, data) => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log(data);
-            req.flash('success', 'Profile deleted');
-            res.redirect('/');
-        }
-    })
-});
-
 module.exports = router;

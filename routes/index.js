@@ -113,15 +113,26 @@ router.post('/third-page/:id', ensureAuthenticated, (req, res) => {
 
 router.get('/delete/:id', ensureAuthenticated, (req, res) => {
     let id = req.params.id;
-    CatFancier.findByIdAndRemove({
+    CatFancier.findById({
         _id: id
     }, (err, data) => {
         if (err) {
             console.log(err);
         } else {
-            let name = data.name;
-            res.render('layouts/delete.ejs', {
-                name
+            let user_id = data.user_id;
+            User.findByIdAndRemove({ _id : user_id }, (err, data) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    CatFancier.findByIdAndRemove({ _id : id }, (err, data) => {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            let name = data.name;
+                            res.render('layouts/delete.ejs', { name });
+                        }
+                    });
+                }
             });
         }
     });
