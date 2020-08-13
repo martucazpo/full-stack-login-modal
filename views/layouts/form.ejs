@@ -1,8 +1,7 @@
 <div class="form-container">
-    <h1>What is your name and age?</h1>
-    <form action="/catimage" method="POST">
-    <h3>Please enter your name and age</h3>
-    <input id="name" type="text" name="name" placeholder="Your Name" required/>
+    <h1><%= name %>, What is your age?</h1>
+    <form action="/catimage/<%= id %>" method="POST">
+    <h3>Please enter your age</h3>
     <input id="age" type="number" name="age" placeholder="Your Age" required/>
     <input type="submit" value="Submit">
     </form>

@@ -7,6 +7,11 @@ const CatFancierSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    user_id: {
+        type: String,
+        required: true,
+        trim: true
+    },
     age: {
         type: Number,
         required: true,

@@ -13,78 +13,116 @@ router.use('/restOfSite', siteRoutes);
 router.use('/', authRoutes);
 
 router.get('/landing/:id', ensureAuthenticated, (req, res) => {
-    User.findById({ _id : req.params.id}, (err, data) => {
+    User.findById({
+        _id: req.params.id
+    }, (err, data) => {
         if (err) {
             console.log(err);
         } else {
             let name = data.name;
-            let email = data.email;
             let id = data._id;
-            res.render('layouts/login/landing', {
+            res.render('layouts/form', {
                 name,
-                email,
                 id
             });
         }
     });
 });
 
-router.get('/', (req, res) => {
-    res.render('layouts/form');
-});
-
-router.post('/catimage', (req, res) => {
-    let name = req.body.name;
+router.post('/catimage/:id', ensureAuthenticated, (req, res) => {
+    let id = req.params.id;
     let age = req.body.age;
-    let catFancier = new CatFancier({ name, age });
-    catFancier.save((err, data) => {
+    User.findById({
+        _id: id
+    }, (err, data) => {
         if (err) {
             console.log(err);
         } else {
             let name = data.name;
-            let age = data.age;
-            let id = data._id;
-            res.render('layouts/other-page', {
+            let user_id = data._id;
+            let catFancier = new CatFancier({
                 name,
                 age,
-                id 
+                user_id
             });
-        }
-    });
-});
-
-router.post('/third-page/:id', (req, res) => {
-    let src = req.body.src;
-    let id = req.params.id;
-    CatFancier.findByIdAndUpdate({ _id : id}, { $set: { favoriteCatImg : src } }, { new: true }, (err, data) => {
-        if (err) {
-            console.log(err);
-        } else {
-            let id = data.id;
-            CatFancier.findById({ _id : id }, (err, data) => {
-                if (err){
+            catFancier.save((err, data) => {
+                if (err) {
                     console.log(err);
-                }else{
-                    let name = data.name;
-                    let age = data.age;
-                    let fci = data.favoriteCatImg;
+                } else {
                     let id = data._id;
-                    res.render('layouts/third-page', { name, age, fci, id });
+                    CatFancier.findById({
+                        _id: id
+                    }, (err, data) => {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            let name = data.name;
+                            let age = data.age;
+                            let id = data._id;
+                            res.render('layouts/other-page', {
+                                name,
+                                age,
+                                id
+                            });
+                        }
+                    });
                 }
             });
         }
     });
-    
 });
 
-router.get('/delete/:id', (req, res) => {
+router.post('/third-page/:id', ensureAuthenticated, (req, res) => {
+    let src = req.body.src;
     let id = req.params.id;
-    CatFancier.findByIdAndRemove({ _id: id }, (err, data) => {
+    CatFancier.findByIdAndUpdate({
+        _id: id
+    }, {
+        $set: {
+            favoriteCatImg: src
+        }
+    }, {
+        new: true
+    }, (err, data) => {
+        if (err) {
+            console.log(err);
+        } else {
+            let id = data.id;
+            CatFancier.findById({
+                _id: id
+            }, (err, data) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    let name = data.name;
+                    let age = data.age;
+                    let fci = data.favoriteCatImg;
+                    let id = data._id;
+                    res.render('layouts/third-page', {
+                        name,
+                        age,
+                        fci,
+                        id
+                    });
+                }
+            });
+        }
+    });
+
+});
+
+router.get('/delete/:id', ensureAuthenticated, (req, res) => {
+    let id = req.params.id;
+    CatFancier.findByIdAndRemove({
+        _id: id
+    }, (err, data) => {
         if (err) {
             console.log(err);
         } else {
             let name = data.name;
-            res.render('layouts/delete.ejs', { name });
+            res.render('layouts/delete.ejs', {
+                name
+            });
         }
     });
 });

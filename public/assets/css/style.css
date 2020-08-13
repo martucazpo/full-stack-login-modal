@@ -1,4 +1,4 @@
-* {
+*, body, html, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -46,7 +46,7 @@ p {
   max-width: 900px;
 }
 
-form {
+.user-form {
   margin-bottom: 25px;
   padding: 15px;
   background-color: #87D37C;
@@ -56,7 +56,7 @@ form {
   border-radius: 5px;
 }
 
-input {
+.user-input {
   display: block;
   margin-bottom: 10px;
   padding: 5px;
@@ -66,7 +66,7 @@ input {
   font-size: 16px;
 }
 
-input[type=submit] {
+.user-input[type=submit] {
   font-size: 16px;
   border-radius: 3px;
   background-color: #E4F1FE;
@@ -75,7 +75,20 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+.user-input[type=submit]:hover {
+  background-color: #FFFEC4;
+}
+
+.user-input[type=button] {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #E4F1FE;
+  border: 1px solid grey;
+  box-shadow: 2px 2px #999;
+  cursor: pointer;
+}
+
+.user-input[type=button]:hover {
   background-color: #FFFEC4;
 }
 
