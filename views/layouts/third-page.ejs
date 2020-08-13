@@ -1,7 +1,9 @@
 <h1>Hey, <%= name %>, here is the information we have on you. Let me know if this is correct!</h1>
-
 <div>
 <p>Your name is <%= name %>.</p> <button type='button' onClick="window.location.href='/update/name/<%= id %>'">edit</button>
+</div>
+<div>
+<p>Your email is <%= email %>.</p><button type='button' onClick="window.location.href='/update/email/<%= user_id %>'">edit</button>
 </div>
 <div>
 <p>You are <%= age %> years old.</p> <button type='button' onClick="window.location.href='/update/age/<%= id %>'">edit</button>
@@ -18,4 +20,7 @@
 </div>
 <div>
 <button type="button" onClick="window.location.href= '/delete/<%= id %>'">That's weird, please delete my profile</button>
+</div>
+<div>
+<button type="button" onClick="window.location.href='/auth/logout'">Logout</button>
 </div>

@@ -21,6 +21,7 @@ router.get('/landing/:id', ensureAuthenticated, (req, res) => {
         } else {
             let name = data.name;
             let id = data._id;
+            let email = data.email;
             CatFancier.findOne({
                 user_id: id
             }, (err, data) => {
@@ -36,11 +37,14 @@ router.get('/landing/:id', ensureAuthenticated, (req, res) => {
                     let age = data.age;
                     let fci = data.favoriteCatImg;
                     let id = data._id;
+                    let user_id = data.user_id;
                     res.render('layouts/third-page', {
+                        email,
                         name,
                         age,
                         fci,
-                        id
+                        id,
+                        user_id
                     });
                 }
             });
@@ -116,12 +120,24 @@ router.post('/third-page/:id', ensureAuthenticated, (req, res) => {
                     let name = data.name;
                     let age = data.age;
                     let fci = data.favoriteCatImg;
+                    let user_id = data.user_id;
                     let id = data._id;
-                    res.render('layouts/third-page', {
-                        name,
-                        age,
-                        fci,
-                        id
+                    User.findOne({
+                        _id: user_id
+                    }, (err, data) => {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            let email = data.email
+                            res.render('layouts/third-page', {
+                                name,
+                                email,
+                                age,
+                                fci,
+                                id,
+                                user_id
+                            });
+                        }
                     });
                 }
             });

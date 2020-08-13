@@ -36,8 +36,49 @@ router.post('/name/:id', (req, res) => {
                         if (err) {
                             console.log(err);
                         } else {
-                            res.render('layouts/third-page.ejs', { name, id, age, fci });
+                            let email = data.email;
+                            res.render('layouts/third-page.ejs', { name, email, id, age, user_id, fci });
                         }
+                    });
+                }
+            });
+        }
+    });
+});
+
+router.get('/email/:id', (req, res)=> {
+    let id = req.params.id;
+    User.findById({ _id : id }, (err, data) => {
+        if (err) {
+            console.log(err)
+        } else {
+            let id = data._id;
+            let email = data.email;
+            res.render('layouts/updates/email.ejs', { email, id });
+        }
+    });
+});
+
+router.post('/email/:id', (req, res) => {
+    let id = req.params.id;
+    let email = req.body.email;
+    User.findByIdAndUpdate({ _id : id }, { $set: {email : email} }, { new : true}, (err, data) => {
+        if (err) {
+            console.log(err)
+        } else {
+            let email = data.email;
+            let catId = data._id;
+            CatFancier.findOne({ user_id : catId }, (err, data) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    let name = data.name;
+                    let user_id = data.user_id;
+                    let id = data._id;
+                    let age = data.age;
+                    let fci = data.favoriteCatImg;
+                    res.render('layouts/third-page.ejs', {
+                        name, email, age, user_id, id, fci
                     });
                 }
             });
@@ -73,8 +114,16 @@ router.post('/age/:id', (req, res) => {
                     let name = data.name;
                     let age = data.age;
                     let id = data._id;
+                    let user_id = data.user_id;
                     let fci = data.favoriteCatImg;
-                    res.render('layouts/third-page.ejs', { age, id, name, fci });
+                    User.findOne({ _id : user_id }, (err, data) => {
+                        if (err) {
+                            console.log(err)
+                        } else {
+                            let email = data.email;
+                            res.render('layouts/third-page.ejs', { age, id, name, fci, email, user_id });
+                        } 
+                    }); 
                 }
             }); 
         }

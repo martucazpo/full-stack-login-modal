@@ -1,0 +1,10 @@
+<div id="emailContainer" class="email-container">
+<h1>We have your email on file as <%= email %></h1>.
+<h2>Maybe that has changed?</h2>
+<div>
+<form action="/update/email/<%= id %>" method="POST">
+<input type="email" name="email" placeholder="What is your email?" required />
+<button type="submit">Change email</button> 
+</form>
+</div>
+</div> 
