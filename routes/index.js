@@ -21,9 +21,28 @@ router.get('/landing/:id', ensureAuthenticated, (req, res) => {
         } else {
             let name = data.name;
             let id = data._id;
-            res.render('layouts/form', {
-                name,
-                id
+            CatFancier.findOne({
+                user_id: id
+            }, (err, data) => {
+                if (err) {
+                    console.log(err)
+                } else if (!data || data === undefined) {
+                    res.render('layouts/form', {
+                        name,
+                        id
+                    });
+                } else {
+                    let name = data.name;
+                    let age = data.age;
+                    let fci = data.favoriteCatImg;
+                    let id = data._id;
+                    res.render('layouts/third-page', {
+                        name,
+                        age,
+                        fci,
+                        id
+                    });
+                }
             });
         }
     });
@@ -120,16 +139,22 @@ router.get('/delete/:id', ensureAuthenticated, (req, res) => {
             console.log(err);
         } else {
             let user_id = data.user_id;
-            User.findByIdAndRemove({ _id : user_id }, (err, data) => {
+            User.findByIdAndRemove({
+                _id: user_id
+            }, (err, data) => {
                 if (err) {
                     console.log(err);
                 } else {
-                    CatFancier.findByIdAndRemove({ _id : id }, (err, data) => {
+                    CatFancier.findByIdAndRemove({
+                        _id: id
+                    }, (err, data) => {
                         if (err) {
                             console.log(err);
                         } else {
                             let name = data.name;
-                            res.render('layouts/delete.ejs', { name });
+                            res.render('layouts/delete.ejs', {
+                                name
+                            });
                         }
                     });
                 }
