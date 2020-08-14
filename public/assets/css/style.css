@@ -1,3 +1,7 @@
+@import './site-styles/bar.css';
+@import './site-styles/portal.css';
+@import './site-styles/site.css';
+
 *, body, html, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -26,23 +30,8 @@ img {
     cursor: pointer;
 }
 
-body {
-  font-family:sans-serif;
-  color: #222;
-  background-color: #f5f5f5;
-}
-
-h1 {
-  font-weight: bold;
-  
-}
-
 .bold {
   font-weight: bold;
-}
-
-p {
-  max-width: 900px;
 }
 
 .user-form {

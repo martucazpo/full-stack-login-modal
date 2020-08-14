@@ -1,0 +1,33 @@
+
+.bar {
+    height: 5em;
+    width: 100vw;
+}
+
+.profile-bar {
+    background-color: gold;
+}
+
+.login-bar {
+    background-color: cyan;
+}
+
+.btn {
+    font-size: 1.5em;
+    padding: .5em;
+    border: none;
+}
+
+.login-bar-btn {
+    background-color: lightgreen;
+}
+
+.profile-bar-profile-btn {
+    background-color: olive;
+    color: white;
+}
+
+.profile-bar-loggout-btn {
+    background-color: green;
+    color: white;
+}
