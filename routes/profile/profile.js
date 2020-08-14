@@ -21,7 +21,7 @@ router.get('/landing/:id', ensureAuthenticated, (req, res) => {
                 if (err) {
                     console.log(err)
                 } else if (!data || data === undefined) {
-                    res.render('layouts/form', {
+                    res.render('layouts/profile/form', {
                         name,
                         id
                     });
@@ -31,7 +31,7 @@ router.get('/landing/:id', ensureAuthenticated, (req, res) => {
                     let fci = data.favoriteCatImg;
                     let id = data._id;
                     let user_id = data.user_id;
-                    res.render('layouts/third-page', {
+                    res.render('layouts/profile/third-page', {
                         email,
                         name,
                         age,
@@ -75,7 +75,7 @@ router.post('/catimage/:id', ensureAuthenticated, (req, res) => {
                             let name = data.name;
                             let age = data.age;
                             let id = data._id;
-                            res.render('layouts/other-page', {
+                            res.render('layouts/profile/other-page', {
                                 name,
                                 age,
                                 id
@@ -122,7 +122,7 @@ router.post('/third-page/:id', ensureAuthenticated, (req, res) => {
                             console.log(err);
                         } else {
                             let email = data.email
-                            res.render('layouts/third-page', {
+                            res.render('layouts/profile/third-page', {
                                 name,
                                 email,
                                 age,
@@ -161,7 +161,7 @@ router.get('/delete/:id', ensureAuthenticated, (req, res) => {
                             console.log(err);
                         } else {
                             let name = data.name;
-                            res.render('layouts/delete.ejs', {
+                            res.render('layouts/profile/delete.ejs', {
                                 name
                             });
                         }

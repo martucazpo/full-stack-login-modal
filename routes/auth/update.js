@@ -37,7 +37,7 @@ router.post('/name/:id', (req, res) => {
                             console.log(err);
                         } else {
                             let email = data.email;
-                            res.render('layouts/third-page.ejs', { name, email, id, age, user_id, fci });
+                            res.render('layouts/profile/third-page.ejs', { name, email, id, age, user_id, fci });
                         }
                     });
                 }
@@ -77,7 +77,7 @@ router.post('/email/:id', (req, res) => {
                     let id = data._id;
                     let age = data.age;
                     let fci = data.favoriteCatImg;
-                    res.render('layouts/third-page.ejs', {
+                    res.render('layouts/profile/third-page.ejs', {
                         name, email, age, user_id, id, fci
                     });
                 }
@@ -121,7 +121,7 @@ router.post('/age/:id', (req, res) => {
                             console.log(err)
                         } else {
                             let email = data.email;
-                            res.render('layouts/third-page.ejs', { age, id, name, fci, email, user_id });
+                            res.render('layouts/profile/third-page.ejs', { age, id, name, fci, email, user_id });
                         } 
                     }); 
                 }
