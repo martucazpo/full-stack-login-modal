@@ -1,7 +1,10 @@
 const router = require('express').Router();
 const CatFancier = require('../../models/CatFancier');
+const {
+    ensureAuthenticated
+} = require('../../passport/auth');
 
-router.post('/', (req, res) => {
+router.post('/', ensureAuthenticated, (req, res) => {
     let id = req.body.id;
     CatFancier.findById({ _id: id }, (err, data) => {
         if (err) {
