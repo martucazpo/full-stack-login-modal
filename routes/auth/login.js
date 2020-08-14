@@ -25,7 +25,7 @@ router.get('/dashboard', ensureAuthenticated, async (req, res) => {
             console.log(err);
         } else {
             let id = data._id;
-            res.redirect(`/landing/${id}`);
+            res.redirect(`/profile/landing/${id}`);
         }
     });
 
@@ -35,7 +35,7 @@ router.get('/dashboard', ensureAuthenticated, async (req, res) => {
 
 router.get('/logout', ensureAuthenticated, (req, res) => {
     req.logout();
-    req.flash('success', 'You have logged out')
+    req.flash('success', 'You have logged out');
     res.redirect('/');
 });
 
