@@ -6,6 +6,10 @@ const {
     ensureAuthenticated
 } = require('../../passport/auth');
 
+router.get('/login', (req, res) => {
+    res.render('layouts/login/login');
+});
+
 //login now handled by passport.js
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {

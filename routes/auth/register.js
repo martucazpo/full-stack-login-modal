@@ -53,7 +53,7 @@ router.post('/register', async (req, res) => {
                 //render user name
                 //flash success message
                 req.flash('success', 'You are registered and can log in');
-                res.redirect('/');
+                res.redirect('/auth/login');
             }
         });
     }

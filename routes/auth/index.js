@@ -8,7 +8,7 @@ router.use('/new', registerRoutes);
 router.use('/update', updateRoutes);
 
 router.get('/', (req, res) => {
-    res.render('layouts/login/login');
+    res.render('layouts/site/portal');
 });
 
 
