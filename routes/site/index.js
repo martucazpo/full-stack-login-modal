@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const CatFancier = require('../../models/CatFancier');
+const User = require('../../models/User');
 const {
     ensureAuthenticated
 } = require('../../passport/auth');
+
 
 router.post('/', ensureAuthenticated, (req, res) => {
     let id = req.body.id;

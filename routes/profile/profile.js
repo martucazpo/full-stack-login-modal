@@ -31,7 +31,7 @@ router.get('/landing/:id', ensureAuthenticated, (req, res) => {
                     let fci = data.favoriteCatImg;
                     let id = data._id;
                     let user_id = data.user_id;
-                    res.render('layouts/profile/third-page', {
+                    res.render('layouts/profile/third-page.ejs', {
                         email,
                         name,
                         age,
