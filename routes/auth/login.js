@@ -24,12 +24,8 @@ router.get('/dashboard', ensureAuthenticated, async (req, res) => {
         if (err) {
             console.log(err);
         } else {
-            let name = data.name;
             let id = data._id;
-            res.render('layouts/login/username', {
-                name: name,
-                id: id
-            });
+            res.redirect(`/landing/${id}`);
         }
     });
 

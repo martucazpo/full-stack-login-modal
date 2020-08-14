@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const updateRoutes = require('./update');
+//const updateRoutes = require('./update');
 const siteRoutes = require('./site');
 const authRoutes = require('./auth');
 const CatFancier = require('../models/CatFancier');
@@ -8,7 +8,7 @@ const {
     ensureAuthenticated
 } = require('../passport/auth');
 
-router.use('/update', updateRoutes);
+//router.use('/update', updateRoutes);
 router.use('/restOfSite', siteRoutes);
 router.use('/', authRoutes);
 
