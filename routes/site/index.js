@@ -14,7 +14,8 @@ router.post('/', ensureAuthenticated, (req, res) => {
             let age = data.age;
             let id = data.id;
             let fci = data.favoriteCatImg;
-            res.render('layouts/site/rest-of-site.ejs', { name, id, age, fci });
+            let user_id = data.user_id;
+            res.render('layouts/site/rest-of-site.ejs', { name, id, age, fci, user_id });
         }
     });
 });
