@@ -2,6 +2,7 @@
 .bar {
     height: 5em;
     width: 100vw;
+    display: flex;
 }
 
 .profile-bar {
@@ -9,7 +10,9 @@
 }
 
 .login-bar {
-    background-color: cyan;
+    background-color: rgba(24, 3, 41, 0.8);
+    align-items: center;
+
 }
 
 .btn {
@@ -19,7 +22,14 @@
 }
 
 .login-bar-btn {
-    background-color: lightgreen;
+    margin-left: 30px;
+    background-color: rgb(24, 3, 41);
+    color: white;
+}
+
+.login-bar-btn:hover {
+    background-color: coral;
+    outline: none;
 }
 
 .profile-bar-profile-btn {
