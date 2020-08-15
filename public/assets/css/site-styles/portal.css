@@ -9,4 +9,23 @@
     background-image: url('../../images/infiniteCat.gif');
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.portal-content-wrapper {
+    height: 95%;
+    width: 95%;
+    background-color:rgba(226, 218, 231, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: .5em;
+    color: rgb(31, 2, 59);
+
+}
+
+.portal-content {
+    font-size: 2em;
 }

@@ -4,10 +4,12 @@
 <a class="login-modal-anchor tooltip" href="/">&#10005;</a>
 </div>
 <h1>Login</h1>
+<div class="space-div"></div>
   <form action="/auth/login" method="POST" class="user-form">
     <h3>Please enter your email and password</h3>
-    <input id="uemail" type="email" name="email" class="user-input" placeholder="useremail">
-    <input id="password" type="password" class="user-input" name="password" placeholder="userpassword">
+    <input id="uemail" type="email" name="email" class="user-input" placeholder="email">
+    <input id="password" type="password" class="user-input" name="password" placeholder="password">
+    <div></div>
     <input type="submit" class="user-input" value="Submit">
     <input type="button" value="Register" class="user-input" onClick="window.location.href='/new/register'">
   </form>
