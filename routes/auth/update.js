@@ -60,7 +60,9 @@ router.get('/email/:id', (req, res)=> {
                     console.log(err)
                 } else {
                     let fci = data.favoriteCatImg;
-                    res.render('layouts/updates/email.ejs', { email, id, fci });
+                    let cat_id = data._id;
+        
+                    res.render('layouts/updates/email.ejs', { cat_id, email, id, fci });
                 }
             }); 
         }

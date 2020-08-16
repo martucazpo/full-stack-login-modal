@@ -54,6 +54,7 @@
     border: 1px solid lightgrey;
     border-radius: 3px;
     font-size: 1.65em;
+    outline: none;
 }
 
 .user-input[type=submit] {

@@ -59,6 +59,10 @@
     background-color:rgba(212, 183, 129, 0.3);
 }
 
+.profile-anchor {
+    margin-top: -30px;
+}
+
 .profile-user-form {
     background-color:rgb(212, 183, 129) ;
 }
