@@ -1,10 +1,14 @@
-<div id="emailContainer" class="email-container">
+<div id="nameContainer" class="site-container" style="background-image:url(<%= fci %>);">
+<div class="login-form-wrapper profile-form-wrapper">
+<div class="update-name-text">
 <h1>We have your email on file as <%= email %></h1>.
 <h2>Maybe that has changed?</h2>
+</div>
 <div>
-<form action="/update/email/<%= id %>" method="POST">
-<input type="email" name="email" placeholder="What is your email?" required />
-<button type="submit">Change email</button> 
+<form class="user-form profile-user-form" action="/update/email/<%= id %>" method="POST">
+<input class="user-input" type="email" name="email" placeholder="What is your email?" required />
+<button class="user-input profile-input" type="submit">Change email</button> 
 </form>
 </div>
-</div> 
+</div>
+</div>

@@ -1,0 +1,117 @@
+.profile-header {
+    margin-bottom: 1em;
+    border: 1px solid rgb(49, 25, 70);
+    padding: .5em;
+    background-color: rgb(247, 240, 235);
+}
+
+.profile-content > h1, h2, h3 {
+    font-size: 2em;
+}
+
+.profile-field-div {
+    margin-left: 3em;
+    display: flex;
+    font-size: 2em;
+}
+
+.profile-btn {
+    background-color: rgb(49, 25, 70);
+    color: rgb(219, 200, 224);
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.profile-btn:hover {
+    background-color: coral;
+    color: rgb(49, 25, 70);
+}
+
+.edit-btn {
+    font-size: .5em;
+    margin-left: .5em;
+}
+
+.profile-cat-div {
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.profile-cat-div > img {
+    max-height:80%;
+    max-width: 80%;
+    border-radius: 50%;
+}
+
+.profile-cat-div > .btn {
+    max-width: 20%;
+}
+
+.profile-btn-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border: 1px solid rgb(49, 25, 70);
+    background-color: rgb(247, 240, 235);
+}
+
+.profile-form-wrapper {
+    background-color:rgba(212, 183, 129, 0.3);
+}
+
+.profile-user-form {
+    background-color:rgb(212, 183, 129) ;
+}
+
+.profile-input[type=submit] {
+    background-color: coral;
+    color:rgb(49, 25, 70);
+}
+
+.profile-input[type=submit]:hover {
+    background-color: rgb(49, 25, 70);
+    color: rgb(231, 223, 233);
+}
+
+.update-name-text {
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color: rgba(129, 111, 64, 0.9);
+    border-radius: .5em;
+}
+
+.update-name-text > h1 {
+    color:rgb(22, 17, 26);
+}
+
+.update-name-text > h2, h3 {
+    color:rgb(221, 223, 201)
+}
+
+.partial-cat-image-div {
+    max-height: 100%;
+    max-width: 100%;
+    padding: .5em 2em .5em 2em;
+    background-color:rgb(212, 183, 129) ;
+    display: flex;
+}
+
+.profile-cat-btn:hover {
+    background-color:rgb(221, 223, 201)
+}
+
+.lone-cat-img {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.lone-cat-img > img {
+    max-height: 80px;
+    max-width: 80px;
+    border-radius: 50%;
+}
+
+.cat-form {
+    margin: .5em;
+}

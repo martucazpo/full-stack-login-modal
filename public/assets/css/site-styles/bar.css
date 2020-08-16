@@ -5,20 +5,27 @@
     display: flex;
 }
 
-.profile-bar {
-    background-color: gold;
-}
-
 .login-bar {
     background-color: rgba(24, 3, 41, 0.8);
     align-items: center;
 
 }
 
+.profile-bar {
+    background-color: rgba(232, 233, 227, 0.5);
+    justify-content: flex-end;
+}
+
 .btn {
     font-size: 1.5em;
     padding: .5em;
     border: none;
+    outline:none;
+    cursor: pointer;
+}
+
+btn:focus{
+    outline:none;
 }
 
 .login-bar-btn {
@@ -31,15 +38,8 @@
 
 .login-bar-btn:hover {
     background-color: coral;
-    outline: none;
-}
-
-.profile-bar-profile-btn {
-    background-color: olive;
-    color: white;
 }
 
 .profile-bar-loggout-btn {
-    background-color: green;
-    color: white;
+    margin-right: 2em;
 }

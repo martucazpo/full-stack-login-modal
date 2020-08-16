@@ -1,11 +1,14 @@
-<div id="ageContainer" class="age-container">
+<div id="nameContainer" class="site-container" style="background-image:url(<%= fci %>);">
+<div class="login-form-wrapper profile-form-wrapper">
+<div class="update-name-text">
 <h1>We have your age on file as <%= age %></h1>.
 <h2>Maybe you've gotten older?</h2>
-<h3>How old are you?</h3>
+</div>
 <div>
-<form action="/update/age/<%= id %>" method="POST">
-<input type="number" name="age" placeholder="What is your age?" required />
-<button type="submit">Change age</button> 
+<form class="user-form profile-user-form" action="/update/age/<%= id %>" method="POST">
+<input class="user-input" type="number" name="age" placeholder="What is your age?" required />
+<button class="user-input profile-input" type="submit">Change age</button> 
 </form>
+</div>
 </div>
 </div>

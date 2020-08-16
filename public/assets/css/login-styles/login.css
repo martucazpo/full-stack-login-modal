@@ -64,6 +64,7 @@
     box-shadow: 2px 2px rgb(73, 36, 75);
     cursor: pointer;
     color: rgb(221, 198, 228);
+    outline: none;
 }
 
 .user-input[type=submit]:hover {
@@ -78,7 +79,8 @@
     border: 1px solid rgb(73, 36, 75);
     box-shadow: 2px 2px rgb(73, 36, 75);
     cursor: pointer;
-    color: rgb(221, 198, 228);;
+    color: rgb(221, 198, 228);
+    outline: none;
 }
 
 .user-input[type=button]:hover {
@@ -106,5 +108,14 @@
 .login-modal-anchor:hover {
     color: coral;
     cursor: pointer;
+}
+
+.cat-form {
+    margin-top: 2em;
+    max-width: 80%;
+}
+
+.cat-form > h1, h2 {
+    font-size: 2em;
 }
 

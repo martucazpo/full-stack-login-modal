@@ -1,8 +1,14 @@
-<div id="fciContainer" class="fci-container">
-<div>
+<div id="nameContainer" class="site-container" style="background-image:url(<%= fci %>);">
+<div class="login-form-wrapper profile-form-wrapper">
+<div class="update-name-text">
 <h1>If this is not your favorite cat picture</h1>
-<img src="<%= fci %>" />
 <h2>Please pick another image!</h2>
+<div class="lone-cat-img">
+<img src="<%= fci %>" />
 </div>
+</div>
+<div class="cat-btn-partial-div">
 <%- include('./partials/cat-img-form.ejs') %>
+</div>
+</div>
 </div>

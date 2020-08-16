@@ -10,7 +10,8 @@ router.get('/name/:id', (req, res) => {
         } else {
             let id = data._id;
             let name = data.name;
-            res.render('layouts/updates/name.ejs', { name, id });
+            let fci = data.favoriteCatImg
+            res.render('layouts/updates/name.ejs', { name, id, fci });
         }
     });
 });
@@ -54,7 +55,14 @@ router.get('/email/:id', (req, res)=> {
         } else {
             let id = data._id;
             let email = data.email;
-            res.render('layouts/updates/email.ejs', { email, id });
+            CatFancier.findOne({ user_id : id}, (err, data) =>{
+                if (err) {
+                    console.log(err)
+                } else {
+                    let fci = data.favoriteCatImg;
+                    res.render('layouts/updates/email.ejs', { email, id, fci });
+                }
+            }); 
         }
     });
 });
@@ -92,9 +100,10 @@ router.get('/age/:id', (req, res) => {
         if (err) {
             console.log(err);
         } else {
-            let id = data._id
+            let id = data._id;
             let age = data.age;
-            res.render('layouts/updates/age.ejs', { age, id });
+            let fci = data.favoriteCatImg;
+            res.render('layouts/updates/age.ejs', { age, id, fci });
         }
     });
 });

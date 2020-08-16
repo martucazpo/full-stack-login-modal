@@ -27,5 +27,11 @@
 }
 
 .portal-content {
-    font-size: 2em;
+    background-color: rgba(232, 233, 227, 0.5);
+    padding: 3em;
+    border-radius: .5em;
+}
+
+.portal-content > h1, h2, h3 {
+    font-size: 5em;
 }

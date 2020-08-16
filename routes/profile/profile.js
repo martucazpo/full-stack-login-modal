@@ -160,10 +160,7 @@ router.get('/delete/:id', ensureAuthenticated, (req, res) => {
                         if (err) {
                             console.log(err);
                         } else {
-                            let name = data.name;
-                            res.render('layouts/profile/delete.ejs', {
-                                name
-                            });
+                            res.redirect('/');
                         }
                     });
                 }

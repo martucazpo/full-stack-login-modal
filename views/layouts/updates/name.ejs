@@ -1,11 +1,15 @@
-<div id="nameContainer" class="name-container">
+<div id="nameContainer" class="site-container" style="background-image:url(<%= fci %>);">
+<div class="login-form-wrapper profile-form-wrapper">
+<div class="update-name-text">
 <h1>We have your name on file as <%= name %></h1>.
 <h2>We're sorry that we got it wrong!</h2>
 <h3>How would you like to be called?</h3>
+</div>
 <div>
-<form action="/update/name/<%= id %>" method="POST">
-<input type="text" name="name" placeholder="What is your name?" required/>
-<button type="submit">Change Name</button> 
+<form class="user-form profile-user-form" action="/update/name/<%= id %>" method="POST">
+<input class="user-input" type="text" name="name" placeholder="What is your name?" required/>
+<button class="user-input profile-input" type="submit">Change Name</button> 
 </form>
 </div>
 </div> 
+</div>
