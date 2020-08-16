@@ -1,0 +1,46 @@
+.btn {
+    font-size: 1.5em;
+    padding: .5em;
+    border: none;
+    outline:none;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline:none;
+}
+
+.login-bar-btn {
+    margin-left: 30px;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: rgb(24, 3, 41);
+    color: white;
+}
+
+.login-bar-btn:hover {
+    background-color: coral;
+}
+
+
+.edit-btn {
+    font-size: .5em;
+    margin-left: .5em;
+}
+
+
+.profile-btn {
+    background-color: rgb(49, 25, 70);
+    color: rgb(219, 200, 224);
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.profile-btn:hover {
+    background-color: coral;
+    color: rgb(49, 25, 70);
+}
+
+.profile-bar-loggout-btn {
+    margin-right: 2em;
+}
