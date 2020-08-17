@@ -1,0 +1,67 @@
+.game-div {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.score-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    margin: 1em 0em 1em 0em;
+}
+
+.age-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 1em 0em 1em 0em;  
+}
+
+.target-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    margin: 1em 0em 1em 0em;
+}
+
+.number-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.game-btn {
+    margin: 10px;
+    font-size: 8em;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    outline: none;
+    border: none;
+}
+
+.target1 {
+    background-image: url('../../images/catdance.gif');
+}
+
+.target2 {
+    background-image: url('../../images/mew2.gif');
+}
+
+.target3 {
+    background-image: url('../../images/spinnercat.gif');
+}
