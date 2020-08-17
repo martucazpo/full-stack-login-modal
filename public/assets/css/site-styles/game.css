@@ -1,3 +1,7 @@
+.game-content {
+    background-color: rgba(232, 233, 227, 0.8);
+}
+
 .game-div {
     height: 100%;
     width: 100%;
@@ -65,3 +69,4 @@
 .target3 {
     background-image: url('../../images/spinnercat.gif');
 }
+

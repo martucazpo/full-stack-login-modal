@@ -1,9 +1,11 @@
 const router = require('express').Router();
 const CatFancier = require('../../models/CatFancier');
-const User = require('../../models/User');
+const gameRoutes = require('./game');
 const {
     ensureAuthenticated
 } = require('../../passport/auth');
+
+router.use('/game', gameRoutes);
 
 router.get('/:id', ensureAuthenticated, (req, res) => {
     let id = req.params.id;
