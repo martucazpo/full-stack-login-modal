@@ -1,5 +1,13 @@
 .game-content {
     background-color: rgba(232, 233, 227, 0.8);
+    padding-top: 0px;
+    margin-top: -50px;
+}
+
+.game-content-wrapper {
+    height: 100%;
+    width: 100%;
+    padding-top: 0;
 }
 
 .game-div {
@@ -43,6 +51,28 @@
     height: 100%;
     display: flex;
     justify-content: center;
+}
+
+.wins-and-losses-div {
+    display: flex;
+    flex-direction: column;  
+}
+
+.wins-losses-img-div {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.wins-img-div {
+    background-image: url('../../images/whosahappykitty.gif');
+}
+
+.losses-img-div {
+    background-image: url('../../images/angrycat.gif');
 }
 
 .game-btn {

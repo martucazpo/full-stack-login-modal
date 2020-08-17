@@ -1,12 +1,18 @@
+
+.profile-content-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.profile-content > h1, h2, h3 {
+    font-size: 2em;
+}
+
 .profile-header {
     margin-bottom: 1em;
     border: 1px solid rgb(49, 25, 70);
     padding: .5em;
     background-color: rgb(247, 240, 235);
-}
-
-.profile-content > h1, h2, h3 {
-    font-size: 2em;
 }
 
 .profile-field-div {
@@ -39,6 +45,14 @@
 .profile-input[type=submit]:hover {
     background-color: rgb(49, 25, 70);
     color: rgb(231, 223, 233);
+}
+
+.profile-close-modal-login {
+    margin-top: -50px;
+}
+
+.profile-modal-anchor {
+    margin-right: -35px;
 }
 
 

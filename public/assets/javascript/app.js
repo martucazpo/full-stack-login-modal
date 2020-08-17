@@ -49,9 +49,8 @@ function setUpGame() {
     val2 = makeRange(age);
     val3 = makeRange(age);
     scoreDiv.innerText = "Score: " + score;
-    winsDiv.innerText = "Wins: " + wins;
-    lossesDiv.innerText = "Losses: " + losses;
-    ageScript.innerText = `${name}, your age, ${age}, will by multiplied by ${randomNumber} to make the game number.`
+    winsDiv.innerHTML = "<p>Wins: " + wins + "</p><div class='wins-losses-img-div wins-img-div'></div>";
+    lossesDiv.innerHTML = "<p>Losses: " + losses + "</p><div class='wins-losses-img-div losses-img-div'></div>";
     playerNumber.innerText = "Player Number: " + playerNum;
     targetNumber.innerText = "Game Number: " + targetNum;
     target1.innerText = val1;
@@ -127,23 +126,17 @@ function setUpDivs(){
     scoreDiv.setAttribute("id", "scoreDiv");
     scoreDiv.setAttribute("class", "score-div");
     scoreWrapper.appendChild(scoreDiv);
+
     const winsDiv = document.createElement("div");
     winsDiv.setAttribute("id", "winsDiv");
-    winsDiv.setAttribute("class", "wins-div");
+    winsDiv.setAttribute("class", "wins-and-losses-div wins-div");
     scoreWrapper.appendChild(winsDiv);
+
     const lossesDiv = document.createElement("div");
     lossesDiv.setAttribute("id", "lossesDiv");
-    lossesDiv.setAttribute("class", "losses-div");
+    lossesDiv.setAttribute("class", "wins-and-losses-div losses-div");
     scoreWrapper.appendChild(lossesDiv);
 
-    const ageWrapper = document.createElement("div");
-    ageWrapper.setAttribute("id", "ageWrapper");
-    ageWrapper.setAttribute("class", "age-wrapper");
-    const ageScript = document.createElement("div");
-    ageScript.setAttribute("id", "ageScript");
-    ageScript.setAttribute("class", "age-script");
-    ageWrapper.appendChild(ageScript);
-    
     const targetWrapper = document.createElement("div");
     targetWrapper.setAttribute("id", "targetWrapper");
     targetWrapper.setAttribute("class", "target-wrapper");
@@ -175,10 +168,9 @@ function setUpDivs(){
     target3.setAttribute("class", "game-btn target3");
     numberWrapper.appendChild(target3);
     
-    
     const gameDiv = document.getElementById("gameDiv");
     gameDiv.appendChild(scoreWrapper);
-    gameDiv.appendChild(ageWrapper);
     gameDiv.appendChild(targetWrapper);
     gameDiv.appendChild(numberWrapper);
+    
 }
