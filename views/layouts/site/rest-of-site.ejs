@@ -1,14 +1,38 @@
 <div class="profile-bar-div">
-<%- include('./partials/profile-bar.ejs') %>
+    <%- include('./partials/profile-bar.ejs') %>
 </div>
 <div class="portal-container site-container" style="background-image:url(<%= fci %>);">
-<div class="portal-content-wrapper game-content-wrapper">
-<div class="portal-content game-content">
-<div hidden id="name" data-value="<%= name %>"></div>
-<div hidden id="age" data-value="<%= age %>"></div>
-<div hidden id="fci" data-value="<%= fci %>"></div>
-<div hidden id="id" data-value="<%= id %>"></div>
-<div id="gameDiv" class="game-div"></div>
-</div>
-</div>
+    <div class="portal-content-wrapper game-content-wrapper">
+        <div class="portal-content game-content">
+            <div hidden id="age" data-value="<%= age %>"></div>
+            <div hidden id="id" data-value="<%= id %>"></div>
+            <div hidden id="player_id" data-value="<%= player_id %>"></div>
+            <div hidden id="times_played" data-value="<%= times_played %>"></div>
+            <div id="gameDiv" class="game-div">
+                <div id="scoreWrapper" class="score-wrapper">
+                    <div id="scoreDiv class=score-div">
+                        <p id="score" data-value="<%= score %>"></p>
+                        <button id="resetBtn" class="btn reset-btn">Reset</button>
+                    </div>
+                    <div id="winsDiv" class="wins-and-losses-div wins-div">
+                        <p id="winsText" class="winsText"></p>
+                        <div class="wins-losses-img-div wins-img-div"></div>
+                    </div>
+                    <div id="lossesDiv" class="wins-and-losses-div losses-div">
+                        <p id="lossesText" class="lossesText"></p>
+                        <div class="wins-losses-img-div losses-img-div"></div>
+                    </div>
+                </div>
+                <div id="targetWrapper" class="target-wrapper">
+                    <div id="targetNumber" class="target-number"></div>
+                    <div id="playerNumber" class="player-number"></div>
+                </div>
+                <div id="numberWrapper" class="number-wrapper">
+                    <button id="target1" class="game-btn target1"></button>
+                    <button id="target2" class="game-btn target2"></button>
+                    <button id="target3" class="game-btn target3"></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

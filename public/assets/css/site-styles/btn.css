@@ -44,3 +44,8 @@
 .profile-bar-loggout-btn {
     margin-right: 2em;
 }
+
+.reset-btn {
+    font-size: 1em;
+    margin-top: .35em;
+}
