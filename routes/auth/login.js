@@ -47,7 +47,7 @@ router.get('/dashboard', ensureAuthenticated, async (req, res) => {
                             } else {
                                 if (data) {
                                     cat_id = data.cat_id;
-                                    res.redirect('/restOfSite/' + cat_id);
+                                    res.redirect('/restOfSite/game/game/' + cat_id);
                                 } else if (!data) {
                                     let gamePlayer = new GamePlayer({
                                         cat_id : id,
@@ -58,7 +58,7 @@ router.get('/dashboard', ensureAuthenticated, async (req, res) => {
                                             console.log(err);
                                         } else {
                                             let cat_id = data.cat_id;
-                                            res.redirect('/restOfSite/game/' + cat_id);
+                                            res.redirect('/restOfSite/game/game/' + cat_id);
                                         }
                                     });
                                 }

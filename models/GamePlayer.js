@@ -24,6 +24,12 @@ const GamePlayerSchema = new mongoose.Schema({
         default: 0,
         trim: true
     },
+    games_played: {
+        type: Number,
+        required: true,
+        default: 0,
+        trim: true
+    },
 
 });
 

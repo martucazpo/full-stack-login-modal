@@ -5,8 +5,9 @@ const playerId = playerIdDiv.getAttribute('data-value');
 const scoreDBDiv = document.getElementById("score");
 const resetBtn = document.getElementById("resetBtn");
 const timesPlayedDiv = document.getElementById("times_played");
-const timesPlayed = timesPlayedDiv.getAttribute('data-value');
-console.log("timesPlayed: " + timesPlayed);
+const timesPlayedText = document.getElementById("timesPlayedText");
+const gamesPlayedDiv = document.getElementById("games_played");
+const gamesPlayedText = document.getElementById("gamesPlayedText");
 const ageDiv = document.getElementById("age");
 const age = ageDiv.getAttribute('data-value');
 const winsTextP = document.getElementById("winsText");
@@ -21,13 +22,15 @@ const makeRange = (age) => {
     if (age < 10) {
         return randomNum(10, 1);
     } else if (age < 20) {
-        return randomNum(20, 1);
+        return randomNum(20, 10);
     } else {
-        return randomNum(100, 1);
+        return randomNum(50, 10);
     }
 };
 
 let score = scoreDBDiv.getAttribute('data-value');
+let timesPlayed = timesPlayedDiv.getAttribute('data-value');
+let gamesPlayed = gamesPlayedDiv.getAttribute('data-value');
 let randomNumber = 0;
 let wins = 0;
 let losses = 0;
@@ -53,6 +56,8 @@ function setUpGame() {
     val1 = makeRange(age);
     val2 = makeRange(age);
     val3 = makeRange(age);
+    timesPlayedText.innerText = "Matches played: " + timesPlayed;
+    gamesPlayedText. innerText = "Games played: " + gamesPlayed;
     winsTextP.innerText = "Wins: " + wins;
     lossesTextP.innerText = "Losses: " + losses;
     scoreDBDiv.innerText = "Score: " + score;
@@ -92,6 +97,8 @@ function match(playerNum, targetNum) {
 
 function lose() {
     losses++;
+    timesPlayed++;
+    updateTimesPlayed(timesPlayed);
     lossesTextP.innerText = "Losses: " + losses;
     matchScores();
     setUpGame();
@@ -99,6 +106,8 @@ function lose() {
 
 function win() {
     wins++;
+    timesPlayed++;
+    updateTimesPlayed(timesPlayed);
     winsTextP.innerText = "Wins: " + wins;
     matchScores();
     setUpGame();
@@ -107,6 +116,8 @@ function win() {
 function matchScores() {
     if (losses === 3) {
         score--;
+        gamesPlayed++;
+        updateGamesPlayed(gamesPlayed);
         updateScore(score);
         wins = 0;
         losses = 0;
@@ -114,6 +125,8 @@ function matchScores() {
         lossesTextP.innerText = "Losses: " + losses;
     } else if (wins === 3) {
         score++;
+        gamesPlayed++;
+        updateGamesPlayed();
         updateScore(score);
         wins = 0;
         losses = 0;
@@ -122,14 +135,45 @@ function matchScores() {
     }
 }
 
+function updateTimesPlayed(timesPlayed) {
+    let newTimesPlayed = timesPlayed;
+    return axios.post('/restOfSite/updateGame/updateTimesPlayed/' + playerId, {
+        timesPlayed: newTimesPlayed
+    })
+    .then((data) => {
+        if (data.status === 200){
+            timesPlayedText.innerText = "Matches played: " + timesPlayed;
+        } else {
+            console.log("there has been a problem");
+        }
+    })
+    .catch((err) => console.log(err));
+}
+
+function updateGamesPlayed(gamesPlayed) {
+    let newGamesPlayed = gamesPlayed;
+    return axios.post('/restOfSite/updateGame/updateGamesPlayed/' + playerId, {
+        gamesPlayed: newGamesPlayed
+    })
+  
+    .then((data) => {
+        if (data.status === 200){
+            gamesPlayedText. innerText = "Games played: " + gamesPlayed;
+        } else {
+            console.log("there has been a problem");
+        }
+    })
+    .catch((err) => console.log(err));
+}
+
 function updateScore(score) {
     let newScore = score;
-    return axios.post('/restOfSite/game/updateScore/' + playerId, {
+    return axios.post('/restOfSite/updateGame/updateScore/' + playerId, {
         score: newScore
     })
     .then((data) => {
         if (data.status === 200){
-            return scoreDBDiv.innerText = "Score: " + score;
+          scoreDBDiv.innerText = "Score: " + score;
         } else {
             console.log("there has been a problem");
         }

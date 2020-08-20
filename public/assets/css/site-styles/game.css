@@ -1,7 +1,6 @@
 .game-content {
     background-color: rgba(232, 233, 227, 0.8);
     padding-top: 0px;
-    margin-top: -50px;
 }
 
 .game-content-wrapper {
@@ -19,13 +18,24 @@
     flex-direction: column;
 }
 
+.times-played-wrapper {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-top: 10px;
+    border: 1px solid rgb(49, 25, 70);
+    background-color: rgb(232, 233, 227);
+}
+
 .score-wrapper {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     font-size: 2em;
-    margin: 1em 0em 1em 0em;
+    margin: .75em 0em 1em 0em;
 }
 
 .age-wrapper {

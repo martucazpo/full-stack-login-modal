@@ -1,14 +1,19 @@
+<div hidden id="age" data-value="<%= age %>"></div>
+<div hidden id="id" data-value="<%= id %>"></div>
+<div hidden id="player_id" data-value="<%= player_id %>"></div>
+<div hidden id="times_played" data-value="<%= times_played %>"></div>
+<div hidden id="games_played" data-value="<%= games_played %>"></div>
 <div class="profile-bar-div">
     <%- include('./partials/profile-bar.ejs') %>
 </div>
 <div class="portal-container site-container" style="background-image:url(<%= fci %>);">
     <div class="portal-content-wrapper game-content-wrapper">
         <div class="portal-content game-content">
-            <div hidden id="age" data-value="<%= age %>"></div>
-            <div hidden id="id" data-value="<%= id %>"></div>
-            <div hidden id="player_id" data-value="<%= player_id %>"></div>
-            <div hidden id="times_played" data-value="<%= times_played %>"></div>
             <div id="gameDiv" class="game-div">
+                <div id="timesPlayedWrapper" class="times-played-wrapper">
+                    <p id="timesPlayedText" class="times-played-txt"></p>
+                    <p id="gamesPlayedText" class="games-played-txt"></p>
+                </div>
                 <div id="scoreWrapper" class="score-wrapper">
                     <div id="scoreDiv class=score-div">
                         <p id="score" data-value="<%= score %>"></p>
