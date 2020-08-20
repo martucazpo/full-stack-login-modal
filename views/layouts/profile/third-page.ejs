@@ -1,37 +1,53 @@
 <div class="site-container" style="background-image:url(<%= fci %>);">
-<div class="portal-content-wrapper profile-content-wrapper">
-<div class="portal-content profile-content">
-<div class="close-modal-login profile-close-modal-login">
-<a class="login-modal-anchor profile-modal-anchor" href="/restOfSite/game/game/<%= id %>">&#10005;</a>
-</div>
-<div class="profile-header">
-<h1><%= name %>, here is the information we have on you. Is this correct?</h1>
-</div>
-<div class="profile-field-div">
-<p>Your name is <%= name %>.</p> <button class="btn profile-btn edit-btn" type='button' onClick="window.location.href='/update/name/<%= id %>'">edit</button>
-</div>
-<div class="profile-field-div">
-<p>Your email is <%= email %>.</p><button class="btn profile-btn edit-btn" type='button' onClick="window.location.href='/update/email/<%= user_id %>'">edit</button>
-</div>
-<div class="profile-field-div">
-<p>You are <%= age %> years old.</p> <button class="btn profile-btn edit-btn" type='button' onClick="window.location.href='/update/age/<%= id %>'">edit</button>
-</div>
-<div class="profile-field-div profile-cat-div">
-<p>Your favorite cat pic is:</p> 
-<img src="<%= fci %>"/> <button class="btn profile-btn edit-btn" type='button' onClick="window.location.href='/update/fci/<%= id %>'">edit</button>
-</div>
-<div class="profile-btn-group">
-<div>
-<form class="profile-form" action ="/restOfSite" method="POST">
-<input type="hidden" name="id" value="<%= id %>" />
-<button class="btn profile-btn" type="submit">Yes, that's me!</button>
-</form>
-</div>
-<div>
-<button class="btn profile-btn" type="button" onClick="window.location.href= '/profile/delete/<%= id %>'">That's weird, please delete my profile</button>
-</div>
-</div>
-</div>
-</div>
+    <div class="portal-content-wrapper profile-content-wrapper">
+        <div class="portal-content profile-content">
+            <div class="close-modal-login profile-close-modal-login">
+                <a class="login-modal-anchor profile-modal-anchor" href="/restOfSite/game/game/<%= id %>">&#10005;</a>
+            </div>
+            <div class="profile-header">
+                <h1><%= name %>, here is the information we have on you. Is this correct?</h1>
+            </div>
+            <div class="profile-field-div">
+                <p>Your name is <%= name %>.</p> <button class="btn profile-btn edit-btn" type='button'
+                    onClick="window.location.href='/update/name/<%= id %>'">edit</button>
+            </div>
+            <div class="profile-field-div">
+                <p>Your email is <%= email %>.</p><button class="btn profile-btn edit-btn" type='button'
+                    onClick="window.location.href='/update/email/<%= user_id %>'">edit</button>
+            </div>
+            <div class="profile-field-div">
+                <p>You are <%= age %> years old.</p> <button class="btn profile-btn edit-btn" type='button'
+                    onClick="window.location.href='/update/age/<%= id %>'">edit</button>
+            </div>
+            <div class="profile-cat-and-times-played-wrapper">
+                <div class="profile-field-div profile-cat-div">
+                    <p>Your favorite cat pic is:</p>
+                    <div class="profile-cat-img-and-btn-div">
+                    <img src="<%= fci %>" /> <button class="btn profile-btn edit-btn" type='button'
+                        onClick="window.location.href='/update/fci/<%= id %>'">edit</button>
+                    </div>
+                </div>
+                <div class="profile-field-div profile-how-many-div">
+                    <p>How Many times have I played this game?</p> <button class="btn profile-btn edit-btn"
+                        type='button'
+                        onClick="window.location.href='/restOfSite/updateGame/getTimesPlayed/<%= id %>'">How
+                        Many?</button>
+                </div>
+            </div>
+            <div class="profile-btn-group">
+                <div>
+                    <form class="profile-form" action="/restOfSite" method="POST">
+                        <input type="hidden" name="id" value="<%= id %>" />
+                        <button class="btn profile-btn" type="submit">Yes, that's me!</button>
+                    </form>
+                </div>
+                <div>
+                    <button class="btn profile-btn" type="button"
+                        onClick="window.location.href= '/profile/delete/<%= id %>'">That's weird, please delete my
+                        profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
