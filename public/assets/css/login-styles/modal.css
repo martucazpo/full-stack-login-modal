@@ -22,3 +22,14 @@
 .profile-anchor {
     margin-top: -30px;
 }
+
+.times-played-modal {
+    height: 0px;
+}
+
+.times-played-anchor {
+    color: white;
+    font-size: 1em;
+    padding-right: 0px;
+    margin-right: 0px;
+};
