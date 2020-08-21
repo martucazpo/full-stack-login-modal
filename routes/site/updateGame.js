@@ -33,7 +33,7 @@ router.get('/getTimesPlayed/:id', ensureAuthenticated, (req, res) => {
                         if (err) {
                             console.log(err);
                         } else {
-                            let timesPlayed = 0 ;
+                            let timesPlayed = 0;
                             let gamesPlayed = 0;
                             res.render('layouts/site/times-played.ejs', { name, id, fci, timesPlayed, gamesPlayed });
                         }
