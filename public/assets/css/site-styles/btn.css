@@ -45,7 +45,19 @@
     margin-right: 2em;
 }
 
+/* the sizing and border radius are used to make
+ a button that visually matches the images on the same line */ 
 .reset-btn {
-    font-size: 1em;
-    margin-top: .35em;
+    height: 100px;
+    width: 100px;
+    font-size: .75em;
+    border-radius: 100%;
+}
+
+.reset-btn:hover {
+    height: 100px;
+    width: 100px;
+    background-color: coral;
+    color:  white;
+    
 }

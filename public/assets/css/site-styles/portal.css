@@ -15,7 +15,6 @@
 .portal-content-wrapper {
     height: 95%;
     width: 95%;
-  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +25,6 @@
 }
 
 .portal-content {
-    margin-top:7em;
     background-color: rgba(232, 233, 227, 0.7);
     padding: 3em;
     border-radius: .5em;
