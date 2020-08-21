@@ -1,8 +1,33 @@
 const router = require('express').Router();
 const GamePlayer = require('../../models/GamePlayer');
+const CatFancier = require('../../models/CatFancier');
 const {
     ensureAuthenticated
 } = require('../../passport/auth');
+
+router.get('/getTimesPlayed/:id', ensureAuthenticated, (req, res) => {
+    let id = req.params.id;
+    CatFancier.findById({ _id : id }, (err, data) => {
+        if (err) {
+            console.log(err);
+        } else {
+            let name = data.name;
+            let fci = data.favoriteCatImg;
+            GamePlayer.findOne({ cat_id: id }, (err, data) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    let timesPlayed = data.times_played;
+                    let gamesPlayed = data.games_played;
+                    let id = data.cat_id;
+                    res.render('layouts/site/times-played.ejs', {
+                        name, fci, id, gamesPlayed, timesPlayed
+                    });
+                }
+            });
+        }
+    });
+});
 
 router.post('/updateScore/:id', ensureAuthenticated,(req, res) => {
     let playerId = req.params.id;

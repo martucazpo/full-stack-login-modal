@@ -88,6 +88,44 @@ router.post('/catimage/:id', ensureAuthenticated, (req, res) => {
     });
 });
 
+router.get('/third-page/:id', ensureAuthenticated, (req, res) => {
+    let id = req.params.id;
+    CatFancier.findById({
+        _id: id
+    }, (err, data) => {
+        if (err) {
+            console.log(err);
+        } else {
+            let name = data.name;
+            let age = data.age;
+            let fci = data.favoriteCatImg;
+            let user_id = data.user_id;
+            let id = data._id;
+            User.findOne({
+                _id: user_id
+            }, (err, data) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    let email = data.email
+                    res.render('layouts/profile/third-page', {
+                        name,
+                        email,
+                        age,
+                        fci,
+                        id,
+                        user_id
+                    });
+                }
+            });
+        }
+    });
+
+
+
+});
+
+
 router.post('/third-page/:id', ensureAuthenticated, (req, res) => {
     let src = req.body.src;
     let id = req.params.id;

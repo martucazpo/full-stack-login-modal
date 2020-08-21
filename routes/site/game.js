@@ -51,7 +51,7 @@ router.get('/game/:id', ensureAuthenticated, (req, res) => {
 });
 
 
-router.post('/game', ensureAuthenticated, (req, res) => {
+router.post('/game/:id', ensureAuthenticated, (req, res) => {
     let id = req.body.id;
     CatFancier.findById({ _id: id }, (err, data) => {
         if (err) {

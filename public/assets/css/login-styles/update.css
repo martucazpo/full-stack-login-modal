@@ -13,4 +13,27 @@
     color:rgb(221, 223, 201)
 }
 
+.update-times-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(247, 240, 235, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-gamesplayed-div {
+    background-color:rgba(201, 163, 94, 0.95);
+    padding: 4.5em 1em 1em 1em;
+}
+
+.update-timesplayed-text {
+    font-size: 2em;
+}
+
+.update-timesplayed-text > p{
+    color: white; 
+}
+
+
 
