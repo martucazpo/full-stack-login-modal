@@ -13,15 +13,30 @@ router.get('/getTimesPlayed/:id', ensureAuthenticated, (req, res) => {
         } else {
             let name = data.name;
             let fci = data.favoriteCatImg;
+            let user_id = data.user_id;
             GamePlayer.findOne({ cat_id: id }, (err, data) => {
                 if (err) {
                     console.log(err);
-                } else {
+                } else if (data) {
                     let timesPlayed = data.times_played;
                     let gamesPlayed = data.games_played;
                     let id = data.cat_id;
                     res.render('layouts/site/times-played.ejs', {
                         name, fci, id, gamesPlayed, timesPlayed
+                    });
+                } else if (!data) {
+                    let gamePlayer = new GamePlayer({
+                        cat_id : id,
+                        user_id : user_id
+                    });
+                    gamePlayer.save((err, data) => {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            let timesPlayed = 0 ;
+                            let gamesPlayed = 0;
+                            res.render('layouts/site/times-played.ejs', { name, id, fci, timesPlayed, gamesPlayed });
+                        }
                     });
                 }
             });
