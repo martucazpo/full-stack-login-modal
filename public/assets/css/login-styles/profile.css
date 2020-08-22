@@ -1,7 +1,6 @@
 
-.profile-content-wrapper {
-    height: 100%;
-    width: 100%;
+.profile-content {
+    max-height: 100vh;
 }
 
 .profile-content > h1, h2, h3 {

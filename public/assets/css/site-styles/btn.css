@@ -37,11 +37,13 @@
     color: rgb(219, 200, 224);
     border-radius: .5em;
     cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(24, 3, 41, 0.5);
 }
 
 .profile-btn:hover {
     background-color: coral;
     color: rgb(49, 25, 70);
+    box-shadow: inset 0 8px 16px 0 rgba(24, 3, 41, 0.3);
 }
 
 .profile-bar-loggout-btn {
