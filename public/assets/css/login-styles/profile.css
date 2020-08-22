@@ -1,6 +1,9 @@
 
+.profile-content-wrapper{
+    height: auto;
+}
 .profile-content {
-    max-height: 100vh;
+    height: auto;
 }
 
 .profile-content > h1, h2, h3 {
@@ -52,18 +55,17 @@
 
 .profile-cat-div {
     background-color:rgba(212, 183, 129, 0.4) ;
-    height: 75%;
     display: flex;
     border: 1px solid rgb(49, 25, 70);
-    padding-right: 1em;
-    padding-left: 1em;
-    padding-bottom: 0.5em;
+    padding: 0.5em;
     margin-top: 0.5em;
     border-radius: .25em;
+    height:30%;
+
 }
 
 .profile-cat-img-and-btn-div {
-    margin-top: 0.5em;
+    justify-content:center;
     align-items: center;
     display: flex;
 }
@@ -75,12 +77,10 @@
 } 
 
 .profile-how-many-div {
-    max-width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1.5em;
-    margin-bottom: 1.5em;
     border: 1px solid rgb(49, 25, 70);
     background-color: rgb(247, 240, 235);
 }

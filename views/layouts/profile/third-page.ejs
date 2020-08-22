@@ -19,21 +19,25 @@
                 <p>You are <%= age %> years old.</p> <button class="btn profile-btn edit-btn" type='button'
                     onClick="window.location.href='/update/age/<%= id %>'">edit</button>
             </div>
+
+
             <div class="profile-cat-and-times-played-wrapper">
-                <div class="profile-field-div profile-cat-div">
+                <div class="profile-field-div profile-cat-div column">
                     <p>Your favorite cat pic is:</p>
                     <div class="profile-cat-img-and-btn-div">
                     <img src="<%= fci %>" /> <button class="btn profile-btn edit-btn" type='button'
                         onClick="window.location.href='/update/fci/<%= id %>'">edit</button>
                     </div>
                 </div>
-                <div class="profile-field-div profile-how-many-div">
+                <div class="profile-field-div profile-how-many-div column">
                     <p>How Many times have I played this game?</p> <button class="btn profile-btn edit-btn"
                         type='button'
                         onClick="window.location.href='/restOfSite/updateGame/getTimesPlayed/<%= id %>'">How
                         Many?</button>
                 </div>
             </div>
+
+
             <div class="profile-btn-group">
                 <div>
                     <form class="profile-form" action="/restOfSite/game/game/<%= id %>" method="POST">
