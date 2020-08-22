@@ -10,8 +10,7 @@
 }
 
 .login-form-wrapper {
-    height: 75%;
-    width: 55%;
+ 
     background-color:rgba(24, 3, 41, 0.8);
     display: flex;
     justify-content: center;

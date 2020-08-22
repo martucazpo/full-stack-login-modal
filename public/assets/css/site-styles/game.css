@@ -1,41 +1,46 @@
 .game-content {
     background-color: rgba(232, 233, 227, 0.8);
     padding-top: 0px;
+    display:flex;
+    min-width: 90vw;
+    margin:0;
+}
+
+.column{
+    float: left;
+    flex: 40%;
+    margin:1em;
 }
 
 .game-content-wrapper {
-    height: 100%;
-    width: 100%;
     padding-top: 0;
 }
 
 .game-div {
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.times-played-wrapper {
+.play-wrapper {
     display: flex;
     justify-content: space-around;
     font-size: 1.5em;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    margin-top: 10px;
+    padding: .5em .25em;
+    margin: 1em .25em 1em .25em;
     border: 1px solid rgb(49, 25, 70);
     background-color: rgb(232, 233, 227);
 }
 
+/* the display flex is added here to allow for 
+some responsiveness on large screens before the media 
+query for phones */
 .score-wrapper {
-    width: 100%;
-    height: 100%;
     display: flex;
+    flex-flow: row wrap-reverse;
     justify-content: space-around;
     font-size: 2em;
-    margin: .75em 0em 1em 0em;
+    max-height: 8em;
 }
 
 .age-wrapper {
@@ -47,25 +52,9 @@
     margin: 1em 0em 1em 0em;  
 }
 
-.target-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    font-size: 2em;
-    margin: 1em 0em 1em 0em;
-}
-
 .number-wrapper {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
-}
-
-.wins-and-losses-div {
-    display: flex;
-    flex-direction: column;  
 }
 
 .wins-losses-img-div {
@@ -85,9 +74,11 @@
     background-image: url('../../images/angrycat.gif');
 }
 
+/* The text-shadow property is used below to make the numbers easier to see over the images */
 .game-btn {
     margin: 10px;
     font-size: 7.5em;
+    text-shadow: 1px 1px white;
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -96,6 +87,13 @@
     background-position: center;
     outline: none;
     border: none;
+    box-shadow: 0 8px 16px 0 rgba(24, 3, 41, 0.5);
+}
+
+.game-btn:hover{
+    box-shadow: inset 0 8px 16px 0 rgba(24, 3, 41, 0.3);
+    color: coral;
+    text-shadow: rgba(24, 3, 41)
 }
 
 .target1 {
@@ -110,3 +108,22 @@
     background-image: url('../../images/spinnercat.gif');
 }
 
+/* This query is used to make the site game mobile friendly */
+@media only screen and (max-width: 1100px) {
+    .site-container{
+        height:auto;
+        max-width: 100vw;
+        background-size: cover;
+        padding: 6em 0em 1em 0em;
+    }
+
+   .game-content{  
+    display: block;
+    }
+
+    .column{
+        float: center;
+        margin: 1em;
+        width: 100%;
+    }
+}
