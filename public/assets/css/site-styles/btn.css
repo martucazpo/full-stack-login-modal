@@ -1,6 +1,7 @@
 .btn {
     font-size: 1.5em;
-    padding: .5em;
+    margin-left: 30px;
+    padding: .75em 1em;
     border: none;
     outline:none;
     cursor: pointer;
@@ -10,45 +11,26 @@
     outline:none;
 }
 
-.login-bar-btn {
-    margin-left: 30px;
-    padding-left: 2em;
-    padding-right: 2em;
-    background-color: rgb(24, 3, 41);
-    color: white;
-    box-shadow: 0 8px 16px 0 rgba(24, 3, 41,0.5);
+.bar-btn, .user-input[type=button] , .user-input[type=submit] {
+    background-color: var(--violet-shadowD);
+    color:  var(--light-violet);
+    border-radius: .5em;
+    box-shadow: 0 8px 16px 0 var(--violet-shadowM);
+    border:1px solid black;
 }
 
-.login-bar-btn:hover {
+.bar-btn:hover, .user-input[type=button]:hover , .user-input[type=submit]:hover {
     background-color: coral;
-    box-shadow: inset 0 8px 16px 0 rgba(24, 3, 41, 0.5);
-    text-shadow: 1px 1px rgb(24, 3, 41); 
+    box-shadow: inset 0 8px 16px 0 var(--violet-shadowM);
+    text-shadow: 1px 1px var(--violet-shadowD);
+    border:1px solid black; 
 }
-
 
 .edit-btn {
     font-size: .5em;
     margin-left: .5em;
 }
 
-
-.profile-btn {
-    background-color: rgb(49, 25, 70);
-    color: rgb(219, 200, 224);
-    border-radius: .5em;
-    cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(24, 3, 41, 0.5);
-}
-
-.profile-btn:hover {
-    background-color: coral;
-    color: rgb(49, 25, 70);
-    box-shadow: inset 0 8px 16px 0 rgba(24, 3, 41, 0.3);
-}
-
-.profile-bar-loggout-btn {
-    margin-right: 2em;
-}
 
 /* the sizing and border radius are used to make
  a button that visually matches the images on the same line */ 
@@ -57,7 +39,7 @@
     width: 100px;
     font-size: .75em;
     border-radius: 100%;
-    box-shadow: 0 8px 16px 0 rgba(24, 3, 41, 0.5);
+    box-shadow: 0 8px 16px 0 var(--violet-shadowM);
 }
 
 .reset-btn:hover {
@@ -65,6 +47,6 @@
     width: 100px;
     background-color: coral;
     color:  white;
-    box-shadow: inset 0 8px 16px 0 rgba(24, 3, 41, 0.3);
+    box-shadow: inset 0 8px 16px 0 var(--violet-shadowL);
     text-shadow: 1px 1px black; 
 }

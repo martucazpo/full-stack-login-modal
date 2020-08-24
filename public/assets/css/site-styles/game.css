@@ -83,11 +83,10 @@ query for phones */
     width: 200px;
     border-radius: 50%;
     background-size: cover;
-    background-size: cover;
     background-position: center;
     outline: none;
     border: none;
-    box-shadow: 0 8px 16px 0 rgba(24, 3, 41, 0.5);
+    box-shadow: 0 8px 16px 0 var(--violet-shadowM);
 }
 
 .game-btn:hover{

@@ -12,9 +12,9 @@
 
 .profile-header {
     margin-bottom: 1em;
-    border: 1px solid rgb(49, 25, 70);
+    border: 1px solid var(--violet-shadowD);
     padding: .5em;
-    background-color: rgb(247, 240, 235);
+    background-color:var(--off-white);
 }
 
 .profile-field-div {
@@ -27,26 +27,26 @@
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    border: 1px solid rgb(49, 25, 70);
-    background-color: rgb(247, 240, 235);
+    border: 1px solid var(--violet-shadowD);
+    background-color: var(--off-white);
 }
 
 .profile-form-wrapper {
-    background-color:rgba(212, 183, 129, 0.3);
+    background-color:var(--grey);
 }
 
 .profile-user-form {
-    background-color:rgb(212, 183, 129) ;
+    background-color: var(--gold);
 }
 
 .profile-input[type=submit] {
     background-color: coral;
-    color:rgb(49, 25, 70);
+    color:var(--violet);
 }
 
 .profile-input[type=submit]:hover {
-    background-color: rgb(49, 25, 70);
-    color: rgb(231, 223, 233);
+    background-color: var(--violet);
+    color: var(--off-white);
 }
 
 .profile-cat-and-times-played-wrapper {
@@ -54,9 +54,9 @@
 }
 
 .profile-cat-div {
-    background-color:rgba(212, 183, 129, 0.4) ;
+    background-color: var(--grey);
     display: flex;
-    border: 1px solid rgb(49, 25, 70);
+    border: 1px solid var(--violet);
     padding: 0.5em;
     margin-top: 0.5em;
     border-radius: .25em;
@@ -81,8 +81,8 @@
     flex-direction: column;
     justify-content: center;
     padding: 1.5em;
-    border: 1px solid rgb(49, 25, 70);
-    background-color: rgb(247, 240, 235);
+    border: 1px solid var(--violet-shadowD);
+    background-color: var(--off-white);
 }
 
 .profile-how-many-div > p {
