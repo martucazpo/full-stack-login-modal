@@ -1,9 +1,15 @@
 
 .cat-btn {
-    margin: 0;
+    margin: 10px;
     background-color: transparent;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
     outline: none;
     border: none;
+    box-shadow: 0 16px 32px 0 var(--violet-shadowM);
 }
 
 .cat-btn > img {
@@ -12,13 +18,22 @@
     border-radius: 50%;
 }
 
+
 .cat-btn:hover {
-    background-color:rgb(75, 37, 75) ;
+    background-color: var(--violet-shadowD);
+    border-radius: 100%;
+    box-shadow:  2px 4px 8px 4px coral;
+    background-size: cover;
+    background-position: center;
+    outline: none;
+    border: none;
 }
 
 .cat-image-div {
     display: flex;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 .cat-form {
