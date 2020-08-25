@@ -37,19 +37,14 @@
                         Many?</button>
                 </div>
             </div>
-
-
             <div class="profile-btn-group">
                 <div>
                     <form class="profile-form" action="/restOfSite/game/game/<%= id %>" method="POST">
                         <input type="hidden" name="id" value="<%= id %>" />
-                        <button class="btn bar-btn" type="submit">Yes, that's me!</button>
+                        <button class="btn bar-btn" type="submit">That's all correct, Start the Game!</button>
+                        <button class="btn bar-btn" type="button"
+                            onClick="window.location.href= '/profile/delete/<%= id %>'">Delete My Account</button>
                     </form>
-                </div>
-                <div>
-                    <button class="btn bar-btn" type="button"
-                        onClick="window.location.href= '/profile/delete/<%= id %>'">That's weird, please delete my
-                        profile</button>
                 </div>
             </div>
         </div>

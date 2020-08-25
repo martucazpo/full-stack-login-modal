@@ -17,13 +17,17 @@
     border-radius: .5em;
     box-shadow: 0 8px 16px 0 var(--violet-shadowM);
     border:1px solid black;
+    letter-spacing: .5px;
+    font-weight: bold;
 }
 
 .bar-btn:hover, .user-input[type=button]:hover , .user-input[type=submit]:hover {
-    background-color: coral;
+    background-color: var(--gold);
     box-shadow: inset 0 8px 16px 0 var(--violet-shadowM);
-    text-shadow: 1px 1px var(--violet-shadowD);
-    border:1px solid black; 
+   
+    border:.5px solid var(--violet-shadowL); 
+    color: var(--violet-shadowD);
+    
 }
 
 .edit-btn {
@@ -46,8 +50,8 @@
 .reset-btn:hover {
     height: 100px;
     width: 100px;
-    background-color: coral;
-    color:  white;
+    background-color: var(--gold);
+    color:  var(--violet-shadowM);
     box-shadow: inset 0 8px 16px 0 var(--violet-shadowL);
-    text-shadow: 1px 1px black; 
+    text-shadow: 1px 1px var(--off-white); 
 }

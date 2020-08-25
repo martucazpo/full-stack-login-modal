@@ -36,6 +36,11 @@
     border-radius: .25em;
 }
 
+.profile-form{
+    display: flex;
+    flex: wrap
+}
+
 .profile-form-wrapper {
     background-color:var(--grey);
 }
