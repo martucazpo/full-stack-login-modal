@@ -40,6 +40,7 @@
     font-size: .75em;
     border-radius: 100%;
     box-shadow: 0 8px 16px 0 var(--violet-shadowM);
+    padding:0;
 }
 
 .reset-btn:hover {
