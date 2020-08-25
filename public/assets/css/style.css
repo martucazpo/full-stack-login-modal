@@ -15,7 +15,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    --violet: rgb(31, 2, 59);
+    --light-violet: rgb(219, 200, 224);
+    --violet-shadowD: rgba(24, 3, 41, 0.8);
+    --violet-shadowM: rgba(24, 3, 41, 0.5);
+    --violet-shadowL: rgba(24, 3, 41, 0.3);
+    --grey: rgba(232, 233, 227, 0.5);
+    --off-white:  rgb(247, 240, 235);
+    --gold: rgb(212, 183, 129);
 }
+
 
 img {
     height: 200px;

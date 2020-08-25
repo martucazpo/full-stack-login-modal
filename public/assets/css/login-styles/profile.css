@@ -12,41 +12,46 @@
 
 .profile-header {
     margin-bottom: 1em;
-    border: 1px solid rgb(49, 25, 70);
-    padding: .5em;
-    background-color: rgb(247, 240, 235);
+    border: 1px solid var(--violet-shadowD);
+    padding: 1em;
+    background-color:var(--off-white);
+    border-radius: .25em;
 }
 
 .profile-field-div {
-    margin-left: 3em;
+    margin: 1em;
     display: flex;
     font-size: 2em;
+    align-items: center;
+    justify-content: space-around;
 }
+
 
 .profile-btn-group {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    border: 1px solid rgb(49, 25, 70);
-    background-color: rgb(247, 240, 235);
+    border: 1px solid var(--violet-shadowD);
+    background-color: var(--off-white);
+    border-radius: .25em;
 }
 
 .profile-form-wrapper {
-    background-color:rgba(212, 183, 129, 0.3);
+    background-color:var(--grey);
 }
 
 .profile-user-form {
-    background-color:rgb(212, 183, 129) ;
+    background-color: var(--gold);
 }
 
 .profile-input[type=submit] {
     background-color: coral;
-    color:rgb(49, 25, 70);
+    color:var(--violet);
 }
 
 .profile-input[type=submit]:hover {
-    background-color: rgb(49, 25, 70);
-    color: rgb(231, 223, 233);
+    background-color: var(--violet);
+    color: var(--off-white);
 }
 
 .profile-cat-and-times-played-wrapper {
@@ -54,20 +59,20 @@
 }
 
 .profile-cat-div {
-    background-color:rgba(212, 183, 129, 0.4) ;
     display: flex;
-    border: 1px solid rgb(49, 25, 70);
+    background-color: var(--grey);
+    border: 1px solid var(--violet-shadowD);
     padding: 0.5em;
-    margin-top: 0.5em;
     border-radius: .25em;
-    height:30%;
-
+    min-height:30%;
+    justify-content: center;
 }
 
 .profile-cat-img-and-btn-div {
-    justify-content:center;
+    justify-content: space-around;
     align-items: center;
     display: flex;
+    padding-top: 1em;
 }
 
 .profile-cat-img-and-btn-div > img {
@@ -78,11 +83,12 @@
 
 .profile-how-many-div {
     display: flex;
+    background-color: var(--grey);
+    border: 1px solid var(--violet-shadowD);
     flex-direction: column;
-    justify-content: center;
-    padding: 1.5em;
-    border: 1px solid rgb(49, 25, 70);
-    background-color: rgb(247, 240, 235);
+    justify-content: space-around;
+    padding: 0.5em;
+    border-radius: .25em;
 }
 
 .profile-how-many-div > p {

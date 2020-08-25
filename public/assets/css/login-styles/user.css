@@ -7,7 +7,7 @@
     justify-content: space-around;
     width: 100%;
     height: 100%;
-    max-width: 75%;
+  
     max-height: 75%;
     border-radius: 5px;
 }
@@ -29,36 +29,5 @@
     outline: none;
 }
 
-.user-input[type=submit] {
-    font-size: 1.75em;
-    border-radius: 3px;
-    background-color: rgb(130, 86, 136);
-    border: 1px solid rgb(73, 36, 75);
-    box-shadow: 2px 2px rgb(73, 36, 75);
-    cursor: pointer;
-    color: rgb(221, 198, 228);
-    outline: none;
-}
-
-.user-input[type=submit]:hover {
-    background-color:coral;
-    color: rgb(54, 53, 53);
-}
-
-.user-input[type=button] {
-    font-size: 1.75em;
-    border-radius: 3px;
-    background-color:rgb(130, 86, 136);
-    border: 1px solid rgb(73, 36, 75);
-    box-shadow: 2px 2px rgb(73, 36, 75);
-    cursor: pointer;
-    color: rgb(221, 198, 228);
-    outline: none;
-}
-
-.user-input[type=button]:hover {
-    background-color: coral;
-    color: rgb(54, 53, 53);
-}
 
 
