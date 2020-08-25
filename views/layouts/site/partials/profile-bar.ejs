@@ -1,14 +1,13 @@
 <nav class="bar profile-bar">
-    <button
+    <button class="collapsed-btn"
         onclick="this.classList.toggle('collapsed');document.getElementById('nav-links').classList.toggle('expanded')">
         <span></span>
         <span></span>
         <span></span>
-        hello
     </button>
     <ul id="nav-links" class="nav-links">
         <li>
-            <button class="btn bar-btn" type="button"
+            <button class="btn bar-btn nav-button" type="button"
                 onClick="window.location.href='/profile/landing/<%= user_id %>'"><%= name %>
             </button>
         </li>
