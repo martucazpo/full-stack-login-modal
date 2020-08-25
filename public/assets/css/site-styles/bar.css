@@ -1,7 +1,9 @@
 .bar {
-    height: 5em;
     width: 100vw;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:-3%;
 }
 
 .login-bar {
@@ -16,3 +18,13 @@
     align-items: center;
 }
 
+.bar ul {
+    display:flex;
+    list-style-type: none;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+ .bar ul button{
+    display: block;
+} 

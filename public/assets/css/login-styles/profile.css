@@ -13,15 +13,19 @@
 .profile-header {
     margin-bottom: 1em;
     border: 1px solid var(--violet-shadowD);
-    padding: .5em;
+    padding: 1em;
     background-color:var(--off-white);
+    border-radius: .25em;
 }
 
 .profile-field-div {
-    margin-left: 3em;
+    margin: 1em;
     display: flex;
     font-size: 2em;
+    align-items: center;
+    justify-content: space-around;
 }
+
 
 .profile-btn-group {
     display: flex;
@@ -29,6 +33,7 @@
     padding: 1em;
     border: 1px solid var(--violet-shadowD);
     background-color: var(--off-white);
+    border-radius: .25em;
 }
 
 .profile-form-wrapper {
@@ -54,20 +59,20 @@
 }
 
 .profile-cat-div {
-    background-color: var(--grey);
     display: flex;
-    border: 1px solid var(--violet);
+    background-color: var(--grey);
+    border: 1px solid var(--violet-shadowD);
     padding: 0.5em;
-    margin-top: 0.5em;
     border-radius: .25em;
-    height:30%;
-
+    min-height:30%;
+    justify-content: center;
 }
 
 .profile-cat-img-and-btn-div {
-    justify-content:center;
+    justify-content: space-around;
     align-items: center;
     display: flex;
+    padding-top: 1em;
 }
 
 .profile-cat-img-and-btn-div > img {
@@ -78,11 +83,12 @@
 
 .profile-how-many-div {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1.5em;
+    background-color: var(--grey);
     border: 1px solid var(--violet-shadowD);
-    background-color: var(--off-white);
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.5em;
+    border-radius: .25em;
 }
 
 .profile-how-many-div > p {

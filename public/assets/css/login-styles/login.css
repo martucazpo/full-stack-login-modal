@@ -17,6 +17,7 @@
     flex-direction: column;
     border-radius: .5em;
     color: white;
+    padding: 1.5em;
 }
 .message-div{
     color: var(--off-white);

@@ -7,13 +7,18 @@
         hello
     </button>
     <ul id="nav-links" class="nav-links">
-        <button class="btn login-bar-btn" type="button"
-            onClick="window.location.href='/profile/landing/<%= user_id %>'"><%= name %>
-        </button>
-        <button class="btn login-bar-btn" type="button"
-            onClick="window.location.href='/restOfSite/game/howTo/<%= id %>'">
-            How To Play</button>
-        <button class="btn login-bar-btn" type="button" onClick="window.location.href='/'">
-            Log Out</button>
+        <li>
+            <button class="btn bar-btn" type="button"
+                onClick="window.location.href='/profile/landing/<%= user_id %>'"><%= name %>
+            </button>
+        </li>
+        <li>
+            <button class="btn bar-btn" type="button" onClick="window.location.href='/restOfSite/game/howTo/<%= id %>'">
+                How To Play</button>
+        </li>
+        <li>
+            <button class="btn bar-btn" type="button" onClick="window.location.href='/'">
+                Log Out</button>
+        </li>
     </ul>
 </nav>
