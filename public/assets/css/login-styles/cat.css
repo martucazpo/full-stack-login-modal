@@ -63,13 +63,13 @@
     max-height: 100%;
     max-width: 100%;
     padding: .5em 2em .5em 2em;
-    background-color:rgb(212, 183, 129) ;
+    background-color:var(--violet-shadowD);
     display: flex;
 }
 
-.profile-cat-btn:hover {
+/* .profile-cat-btn:hover {
     background-color:rgb(221, 223, 201)
-}
+} */
 
 .lone-cat-img {
     display: flex;
@@ -81,4 +81,5 @@
     max-height: 80px;
     max-width: 80px;
     border-radius: 50%;
+    box-shadow: 0 8px 16px 0 var(--violet-shadowM);
 }

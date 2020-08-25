@@ -1,7 +1,7 @@
 .update-name-text {
     padding: 2em;
     margin: 1em;
-    background-color: rgba(129, 111, 64, 0.9);
+    background-color:var(--violet-shadowD);
     border-radius: .5em;
 }
 
