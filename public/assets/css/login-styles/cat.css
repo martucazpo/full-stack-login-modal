@@ -1,4 +1,3 @@
-
 .cat-btn {
     margin: 10px;
     background-color: transparent;
@@ -18,11 +17,10 @@
     border-radius: 50%;
 }
 
-
 .cat-btn:hover {
     background-color: var(--violet-shadowD);
     border-radius: 100%;
-    box-shadow:  2px 4px 8px 4px coral;
+    box-shadow:  2px 4px 8px 4px var(--gold);
     background-size: cover;
     background-position: center;
     outline: none;
@@ -39,10 +37,6 @@
 .cat-form {
     padding: 2em 0.5em 0.5em 0.5em;
 }
-
-/* .cat-form > h1, h2 {
-    font-size: 2em;
-} */
 
 .profile-cat-div {
     flex-direction: column;
@@ -66,10 +60,6 @@
     background-color:var(--violet-shadowD);
     display: flex;
 }
-
-/* .profile-cat-btn:hover {
-    background-color:rgb(221, 223, 201)
-} */
 
 .lone-cat-img {
     display: flex;
