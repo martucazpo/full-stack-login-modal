@@ -6,7 +6,13 @@
 }
 
 .update-name-text > h1 {
-    color:rgb(22, 17, 26);
+    color:var(--off-white);
+    text-align: center;
+    padding-bottom: .25em;
+}
+
+.update-name-text > h2 {
+    text-align: center;
 }
 
 .update-times-wrapper {

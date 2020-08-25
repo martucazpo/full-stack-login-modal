@@ -6,10 +6,6 @@
     height: auto;
 }
 
-.profile-content > h1, h2, h3 {
-    font-size: 2em;
-}
-
 .profile-header {
     margin-bottom: 1em;
     border: 1px solid var(--violet-shadowD);
@@ -46,7 +42,7 @@
 }
 
 .profile-user-form {
-    background-color: var(--gold);
+    background-color: var(--violet-shadowD);
 }
 
 .profile-input[type=submit] {
@@ -100,12 +96,6 @@
     margin-bottom: 1em;
 }
 
-.profile-close-modal-login {
-    margin-top: -50px;
-}
 
-.profile-modal-anchor {
-    margin-right: -35px;
-}
 
 
