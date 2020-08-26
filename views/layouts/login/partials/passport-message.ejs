@@ -1,3 +1,5 @@
 <% if(typeof error !== 'undefined') { %>
-    <p><%= error %></p>
+<% error.forEach( function(err) { %>
+   <div class="login-msg-partial"><p><%= err %></p></div>
+   <% }) %>
 <% } %>

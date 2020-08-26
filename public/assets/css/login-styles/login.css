@@ -24,3 +24,8 @@
     font-size: 2rem;
     padding:1em;
 }
+
+.login-msg-partial {
+    background-color:var(--violet-shadowD);
+    padding: 2em;
+}
