@@ -28,4 +28,5 @@
 .login-msg-partial {
     background-color:var(--violet-shadowD);
     padding: 2em;
+    border-radius: .5em;
 }
