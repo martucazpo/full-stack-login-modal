@@ -1,15 +1,3 @@
-
-.profile-content-wrapper{
-    height: auto;
-}
-.profile-content {
-    height: auto;
-}
-
-.profile-content > h1, h2, h3 {
-    font-size: 2em;
-}
-
 .profile-header {
     margin-bottom: 1em;
     border: 1px solid var(--violet-shadowD);
@@ -36,16 +24,21 @@
     border-radius: .25em;
 }
 
+.profile-form{
+    display: flex;
+    flex: wrap
+}
+
 .profile-form-wrapper {
     background-color:var(--grey);
 }
 
 .profile-user-form {
-    background-color: var(--gold);
+    background-color: var(--violet-shadowD);
 }
 
 .profile-input[type=submit] {
-    background-color: coral;
+    background-color: var(--gold);
     color:var(--violet);
 }
 
@@ -95,12 +88,6 @@
     margin-bottom: 1em;
 }
 
-.profile-close-modal-login {
-    margin-top: -50px;
-}
 
-.profile-modal-anchor {
-    margin-right: -35px;
-}
 
 
