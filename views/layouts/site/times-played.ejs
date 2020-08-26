@@ -1,16 +1,18 @@
 <div id="nameContainer" class="site-container site-container-height" style="background-image:url(<%= fci %>);">
-    <div class="update-times-wrapper">
-        <div class="update-gamesplayed-div">
-            <div class="close-modal-login times-played-modal">
-                <a class="login-modal-anchor profile-anchor times-played-anchor"
-                    href="/profile/third-page/<%= id %>">&#10005;</a>
-            </div>
-            <div class="update-timesplayed-text">
+    <div class="login-form-wrapper profile-form-wrapper">
+        <div class="close-modal-login">
+            <a class="login-modal-anchor" href="/profile/third-page/<%= id %>">
+                <span></span>
+                <span></span></a>
+        </div>
+        <div class="update-name-text">
             <h1><%= name %></h1>
-            <p>this is how many times you have played this game:</p>
-            <p>You have played <%= timesPlayed %> matches,</p>
-            <p>and you have played <%= gamesPlayed %> games.</p>
-            </div>
+            <h2>Thank you for playing our game, checkout your stats below:</h2>
+            <br>
+            <h2>You have played: <%= timesPlayed %> matches.</h2>
+            <br>
+            <h2>You have played: <%= gamesPlayed %> games.</h2>
         </div>
     </div>
+</div>
 </div>

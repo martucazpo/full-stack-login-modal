@@ -16,7 +16,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: .5em;
-    color: white;
+    color: var(--off-white);
     padding: 1.5em;
 }
 .message-div{

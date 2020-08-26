@@ -1,9 +1,12 @@
 <%- include('../site/partials/logout-bar.ejs') %>
 <div class="site-container" style="background-image:url(<%= fci %>);">
-    <div class="portal-content-wrapper profile-content-wrapper">
-        <div class="portal-content profile-content">
-            <div class="close-modal-login profile-close-modal-login">
-                <a class="login-modal-anchor profile-modal-anchor" href="/restOfSite/game/game/<%= id %>">&#10005;</a>
+    <div class="portal-content-wrapper">
+        
+        <div class="portal-content">
+            <div class="close-modal-login">
+                <a class="login-modal-anchor" href="/"> <span></span>
+                    <span></span>
+                    </a>
             </div>
             <div class="profile-header">
                 <h1><%= name %>, here is the information we have stored on file for you. Is this correct?</h1>
@@ -37,19 +40,14 @@
                         Many?</button>
                 </div>
             </div>
-
-
             <div class="profile-btn-group">
                 <div>
                     <form class="profile-form" action="/restOfSite/game/game/<%= id %>" method="POST">
                         <input type="hidden" name="id" value="<%= id %>" />
-                        <button class="btn bar-btn" type="submit">Yes, that's me!</button>
+                        <button class="btn bar-btn" type="submit">That's all correct, Start the Game!</button>
+                        <button class="btn bar-btn" type="button"
+                            onClick="window.location.href= '/profile/delete/<%= id %>'">Delete My Account</button>
                     </form>
-                </div>
-                <div>
-                    <button class="btn bar-btn" type="button"
-                        onClick="window.location.href= '/profile/delete/<%= id %>'">That's weird, please delete my
-                        profile</button>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@
 @import './login-styles/cat.css';
 @import './site-styles/btn.css';
 @import './site-styles/game.css';
-@import './site-styles/game-how-to.css';
+
 
 *, body, html, ::before, ::after {
     box-sizing: border-box;
@@ -23,6 +23,7 @@
     --grey: rgba(232, 233, 227, 0.5);
     --off-white:  rgb(247, 240, 235);
     --gold: rgb(212, 183, 129);
+    
 }
 
 

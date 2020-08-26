@@ -1,7 +1,7 @@
 .user-form {
     margin-bottom: 25px;
     padding: 15px;
-    background-color: rgb(24, 3, 41);
+    background-color: var(--violet);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -14,7 +14,7 @@
 
 .user-form h3 {
     font-size: 1.5em;
-    color: rgb(151, 151, 189);
+    color: var(--light-violet);
 }
 
 .user-input {
