@@ -3,6 +3,7 @@
     border: 1px solid var(--violet-shadowD);
     padding: 1em;
     background-color: var(--off-white);
+    opacity: 0.8;
     border-radius: .5em;
 }
 
@@ -31,6 +32,7 @@
     border: 1px solid var(--violet-shadowD);
     background-color: var(--off-white);
     border-radius: .5em;
+    opacity: 0.8;
 }
 
 .profile-form {
@@ -106,12 +108,15 @@
         padding: .5em;
         background-color: var(--violet);
     }
-    .profile-header {
+    .profile-header, .profile-btn-group {
         margin: auto;
         max-width: 75vw;
     }
     .profile-div {
         min-width: 70vw;
+    }
+    .profile-cat-and-times-played-wrapper{
+        max-width: 75vw;
     }
     .profile-field-div > .edit-btn , .profile-cat-img-and-btn-div> .edit-btn{
         color:var(--violet-shadowD);
