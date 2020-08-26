@@ -8,6 +8,7 @@ const {
     ensureAuthenticated
 } = require('../../passport/auth');
 
+
 router.get('/login', (req, res) => {
     res.render('layouts/login/login');
 });
