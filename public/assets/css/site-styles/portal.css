@@ -21,11 +21,11 @@
     flex-direction: column;
     border-radius: .5em;
     color: var(--violet);
-
 }
 
 .portal-content {
     background-color: var(--grey);
     padding: 3em;
     border-radius: .5em;
+    max-width: 90vw;
 }

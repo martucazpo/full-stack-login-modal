@@ -2,35 +2,46 @@
     margin-bottom: 1em;
     border: 1px solid var(--violet-shadowD);
     padding: 1em;
-    background-color:var(--off-white);
-    border-radius: .25em;
+    background-color: var(--off-white);
+    opacity: 0.8;
+    border-radius: .5em;
+}
+
+.profile-div {
+    border-radius: .5em;
+    color: var(--off-white);
+    background-color: var(--violet-shadowD);
+    justify-content: center;
 }
 
 .profile-field-div {
-    margin: 1em;
+    padding: .75em;
+    margin: auto;
     display: flex;
+    flex-flow: wrap;
     font-size: 2em;
     align-items: center;
     justify-content: space-around;
+    width: 75vw;
 }
-
 
 .profile-btn-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 1em;
     border: 1px solid var(--violet-shadowD);
     background-color: var(--off-white);
-    border-radius: .25em;
+    border-radius: .5em;
+    opacity: 0.8;
 }
 
-.profile-form{
+.profile-form {
     display: flex;
     flex: wrap
 }
 
 .profile-form-wrapper {
-    background-color:var(--grey);
+    background-color: var(--grey);
 }
 
 .profile-user-form {
@@ -39,7 +50,7 @@
 
 .profile-input[type=submit] {
     background-color: var(--gold);
-    color:var(--violet);
+    color: var(--violet);
 }
 
 .profile-input[type=submit]:hover {
@@ -49,6 +60,7 @@
 
 .profile-cat-and-times-played-wrapper {
     display: flex;
+    flex-flow: wrap;
 }
 
 .profile-cat-div {
@@ -57,7 +69,7 @@
     border: 1px solid var(--violet-shadowD);
     padding: 0.5em;
     border-radius: .25em;
-    min-height:30%;
+    min-height: 30%;
     justify-content: center;
 }
 
@@ -68,11 +80,11 @@
     padding-top: 1em;
 }
 
-.profile-cat-img-and-btn-div > img {
+.profile-cat-img-and-btn-div>img {
     height: 180px;
     width: 180px;
     border-radius: 50%;
-} 
+}
 
 .profile-how-many-div {
     display: flex;
@@ -84,10 +96,38 @@
     border-radius: .25em;
 }
 
-.profile-how-many-div > p {
+.profile-how-many-div>p {
     margin-bottom: 1em;
 }
 
+@media only screen and (min-width:400px) {
+    .portal-content>.close-modal-login {
+        max-width: 85vw;
+    }
+    .portal-content {
+        padding: .5em;
+        background-color: var(--violet);
+    }
+    .profile-header, .profile-btn-group {
+        margin: auto;
+        max-width: 75vw;
+    }
+    .profile-div {
+        min-width: 70vw;
+    }
+    .profile-cat-and-times-played-wrapper{
+        max-width: 75vw;
+    }
+    .profile-field-div > .edit-btn , .profile-cat-img-and-btn-div> .edit-btn{
+        color:var(--violet-shadowD);
+        background-color: var(--gold);
+        font-size: .75em;
+        margin-top: 5px;
+    }
+    .profile-cat-img-and-btn-div{
+        max-width: 75vw;
+        display: flex;
+        flex-flow: wrap;
+    }
 
-
-
+}
