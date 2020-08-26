@@ -11,6 +11,7 @@
             <div class="profile-header">
                 <h1><%= name %>, here is the information we have stored on file for you. Is this correct?</h1>
             </div>
+            <div class = "profile-div">
             <div class="profile-field-div">
                 <p>Your name is <%= name %>.</p> <button class="btn bar-btn edit-btn" type='button'
                     onClick="window.location.href='/update/name/<%= id %>'">Update</button>
@@ -20,10 +21,10 @@
                     onClick="window.location.href='/update/email/<%= user_id %>'">Update</button>
             </div>
             <div class="profile-field-div">
-                <p>You are <%= age %> years old.</p> <button class="btn bar-btn edit-btn" type='button'
+                <p>Your age on record is <%= age %> years old.</p> <button class="btn bar-btn edit-btn" type='button'
                     onClick="window.location.href='/update/age/<%= id %>'">Update</button>
             </div>
-
+        </div>
 
             <div class="profile-cat-and-times-played-wrapper">
                 <div class="profile-field-div profile-cat-div column">
