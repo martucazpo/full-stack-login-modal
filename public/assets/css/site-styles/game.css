@@ -109,6 +109,10 @@ query for phones */
     background-image: url('../../images/spinnercat.gif');
 }
 
+.play-wrapper >p {
+    margin:.25em;
+}
+
 /* This query is used to make the site game mobile friendly */
 
 @media only screen and (min-width:120px) {
