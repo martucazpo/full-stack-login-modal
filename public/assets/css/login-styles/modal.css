@@ -69,7 +69,7 @@
 }
 
 .times-played-anchor {
-    color: white;
+    color: var(--off-white);
     font-size: 1em;
     padding-right: 0px;
     margin-right: 0px;

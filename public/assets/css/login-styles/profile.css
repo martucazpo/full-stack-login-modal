@@ -1,11 +1,3 @@
-
-.profile-content-wrapper{
-    height: auto;
-}
-.profile-content {
-    height: auto;
-}
-
 .profile-header {
     margin-bottom: 1em;
     border: 1px solid var(--violet-shadowD);
@@ -46,7 +38,7 @@
 }
 
 .profile-input[type=submit] {
-    background-color: coral;
+    background-color: var(--gold);
     color:var(--violet);
 }
 

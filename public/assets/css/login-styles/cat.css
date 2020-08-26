@@ -59,6 +59,7 @@
     padding: .5em 2em .5em 2em;
     background-color:var(--violet-shadowD);
     display: flex;
+    border-radius: .5em;
 }
 
 .lone-cat-img {
