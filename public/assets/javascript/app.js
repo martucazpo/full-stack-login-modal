@@ -8,6 +8,8 @@ const timesPlayedDiv = document.getElementById("times_played");
 const timesPlayedText = document.getElementById("timesPlayedText");
 const gamesPlayedDiv = document.getElementById("games_played");
 const gamesPlayedText = document.getElementById("gamesPlayedText");
+const winScreen = document.getElementById("winScreen");
+const loseScreen = document.getElementById("loseScreen")
 const winScore = document.getElementById("winScore");
 const loseScore = document.getElementById("loseScore");
 const ageDiv = document.getElementById("age");
@@ -129,6 +131,7 @@ function matchScores() {
         losses = 0;
         winsTextP.innerText = "Wins: " + wins;
         lossesTextP.innerText = "Losses: " + losses;
+        showHidden(loseScreen, "modal-hidden lose-screen-wrapper", "modal-display lose-screen-wrapper");
     } else if (wins === 3) {
         score++;
         gamesPlayed++;
@@ -140,6 +143,7 @@ function matchScores() {
         losses = 0;
         winsTextP.innerText = "Wins: " + wins;
         lossesTextP.innerText = "Losses: " + losses;
+        showHidden(winScreen, "modal-hidden win-screen-wrapper", "modal-display win-screen-wrapper");
     }
 }
 
@@ -187,6 +191,15 @@ function updateScore(score) {
         }
     })
     .catch((err) => console.log(err));
+}
+
+function showHidden(div, targetClass1, targetClass2) {
+    if (div.classList.contains(targetClass1)) {
+        div.setAttribute("class", targetClass2);
+        div.removeAttribute("class", targetClass1);  
+    } else {
+        div.setAttribute("Class", targetClass2);
+    }
 }
 
 
