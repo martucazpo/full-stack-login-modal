@@ -8,6 +8,8 @@ const timesPlayedDiv = document.getElementById("times_played");
 const timesPlayedText = document.getElementById("timesPlayedText");
 const gamesPlayedDiv = document.getElementById("games_played");
 const gamesPlayedText = document.getElementById("gamesPlayedText");
+const winScore = document.getElementById("winScore");
+const loseScore = document.getElementById("loseScore");
 const ageDiv = document.getElementById("age");
 const age = ageDiv.getAttribute('data-value');
 const winsTextP = document.getElementById("winsText");
@@ -61,6 +63,8 @@ function setUpGame() {
     winsTextP.innerText = "Wins: " + wins;
     lossesTextP.innerText = "Losses: " + losses;
     scoreDBDiv.innerText = "Score: " + score;
+    winScore.innerText = score;
+    loseScore.innerText = score;
     playerNumber.innerText = "Player Number: " + playerNum;
     targetNumber.innerText = "Game Number: " + targetNum;
     target1.innerText = val1;
@@ -117,6 +121,8 @@ function matchScores() {
     if (losses === 3) {
         score--;
         gamesPlayed++;
+        winScore.innerText = score;
+        loseScore.innerText = score;
         updateGamesPlayed(gamesPlayed);
         updateScore(score);
         wins = 0;
@@ -126,6 +132,8 @@ function matchScores() {
     } else if (wins === 3) {
         score++;
         gamesPlayed++;
+        winScore.innerText = score;
+        loseScore.innerText = score;
         updateGamesPlayed();
         updateScore(score);
         wins = 0;

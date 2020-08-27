@@ -9,6 +9,7 @@
 @import './login-styles/cat.css';
 @import './site-styles/btn.css';
 @import './site-styles/game.css';
+@import './site-styles/win-lose-screen.css';
 
 
 *, body, html, ::before, ::after {

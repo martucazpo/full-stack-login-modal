@@ -1,0 +1,15 @@
+.win-screen-wrapper {
+    background-image: url('../../images/whosahappykitty.gif');
+}
+
+.lose-screen-wrapper {
+    background-image: url('../../images/angrycat.gif');
+}
+
+.win-lose-screen-score-display {
+    display: flex;
+}
+
+.win-lose-screen-score-display > span {
+    padding-left: .5em;
+}
