@@ -12,6 +12,8 @@ const winScreen = document.getElementById("winScreen");
 const loseScreen = document.getElementById("loseScreen");
 const winPseudoModalAnchor = document.getElementById("winPseudoModalAnchor");
 const losePseudoModalAnchor = document.getElementById("losePseudoModalAnchor");
+const winLoseModalContainer = document.getElementById("winLoseModalContainer");
+const shadowDiv = document.getElementById("shadowDiv");
 const winScore = document.getElementById("winScore");
 const loseScore = document.getElementById("loseScore");
 const ageDiv = document.getElementById("age");
@@ -55,11 +57,15 @@ resetBtn.addEventListener('click', () => {
 });
 
 winPseudoModalAnchor.addEventListener("click", () => {
-    showHidden(winScreen, "modal-display win-screen-wrapper", "modal-hidden win-screen-wrapper");
+    showHidden(winScreen, "display", "hidden");
+    showHidden(winLoseModalContainer, "display", "hidden");
+    showHidden(shadowDiv, "display", "hidden");
 });
 
 losePseudoModalAnchor.addEventListener("click", () => {
-    showHidden(loseScreen, "modal-display lose-screen-wrapper", "modal-hidden lose-screen-wrapper");
+    showHidden(loseScreen, "display", "hidden");
+    showHidden(winLoseModalContainer, "display", "hidden");
+    showHidden(shadowDiv, "display", "hidden");
 });
 
 function setUpGame() {
@@ -141,7 +147,9 @@ function matchScores() {
         losses = 0;
         winsTextP.innerText = "Wins: " + wins;
         lossesTextP.innerText = "Losses: " + losses;
-        showHidden(loseScreen, "modal-hidden lose-screen-wrapper", "modal-display lose-screen-wrapper");
+        showHidden(loseScreen, "hidden", "display");
+        showHidden(winLoseModalContainer, "hidden", "display");
+        showHidden(shadowDiv, "hidden", "display");
     } else if (wins === 3) {
         score++;
         gamesPlayed++;
@@ -153,7 +161,9 @@ function matchScores() {
         losses = 0;
         winsTextP.innerText = "Wins: " + wins;
         lossesTextP.innerText = "Losses: " + losses;
-        showHidden(winScreen, "modal-hidden win-screen-wrapper", "modal-display win-screen-wrapper");
+        showHidden(winScreen, "hidden", "display");
+        showHidden(winLoseModalContainer, "hidden", "display");
+        showHidden(shadowDiv, "hidden", "display");
     }
 }
 
@@ -205,8 +215,8 @@ function updateScore(score) {
 
 function showHidden(div, targetClass1, targetClass2) {
     if (div.classList.contains(targetClass1)) {
-        div.setAttribute("class", targetClass2);
-        div.removeAttribute("class", targetClass1);  
+        div.classList.remove(targetClass1);
+        div.classList.add(targetClass2);  
     } else {
         div.setAttribute("Class", targetClass2);
     }

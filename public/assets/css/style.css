@@ -10,6 +10,7 @@
 @import './site-styles/btn.css';
 @import './site-styles/game.css';
 @import './site-styles/win-lose-screen.css';
+@import './site-styles/shadow-div.css';
 
 
 *, body, html, ::before, ::after {
@@ -36,4 +37,13 @@ img {
 .space-div {
     height: 1em;
     width: 100%;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+.display {
+    visibility: visible;
 }
