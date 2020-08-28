@@ -1,4 +1,12 @@
-<div id="winScreen" class="modal-hidden win-screen-wrapper">
+<div id="winScreen" class="modal-display win-screen-wrapper">
+    <div class="pseudo-modal-anchor">
+        <div class="close-modal-login">
+            <a id="winPseudoModalAnchor" class="login-modal-anchor" href="#">
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </div>
     <h1>Congratulations, <%= name %>, you won!</h1>
     <div class="win-lose-screen-score-display">
         <p>The score is:</p><span id="winScore"></span>

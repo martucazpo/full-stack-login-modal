@@ -9,7 +9,9 @@ const timesPlayedText = document.getElementById("timesPlayedText");
 const gamesPlayedDiv = document.getElementById("games_played");
 const gamesPlayedText = document.getElementById("gamesPlayedText");
 const winScreen = document.getElementById("winScreen");
-const loseScreen = document.getElementById("loseScreen")
+const loseScreen = document.getElementById("loseScreen");
+const winPseudoModalAnchor = document.getElementById("winPseudoModalAnchor");
+const losePseudoModalAnchor = document.getElementById("losePseudoModalAnchor");
 const winScore = document.getElementById("winScore");
 const loseScore = document.getElementById("loseScore");
 const ageDiv = document.getElementById("age");
@@ -50,6 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
 resetBtn.addEventListener('click', () => {
     score = 0;
     updateScore(score);
+});
+
+winPseudoModalAnchor.addEventListener("click", () => {
+    showHidden(winScreen, "modal-display win-screen-wrapper", "modal-hidden win-screen-wrapper");
+});
+
+losePseudoModalAnchor.addEventListener("click", () => {
+    showHidden(loseScreen, "modal-display lose-screen-wrapper", "modal-hidden lose-screen-wrapper");
 });
 
 function setUpGame() {
