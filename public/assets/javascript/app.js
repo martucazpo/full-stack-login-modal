@@ -147,9 +147,7 @@ function matchScores() {
         losses = 0;
         winsTextP.innerText = "Wins: " + wins;
         lossesTextP.innerText = "Losses: " + losses;
-        showHidden(loseScreen, "hidden", "display");
-        showHidden(winLoseModalContainer, "hidden", "display");
-        showHidden(shadowDiv, "hidden", "display");
+        loseModal();
     } else if (wins === 3) {
         score++;
         gamesPlayed++;
@@ -161,9 +159,7 @@ function matchScores() {
         losses = 0;
         winsTextP.innerText = "Wins: " + wins;
         lossesTextP.innerText = "Losses: " + losses;
-        showHidden(winScreen, "hidden", "display");
-        showHidden(winLoseModalContainer, "hidden", "display");
-        showHidden(shadowDiv, "hidden", "display");
+        winModal();
     }
 }
 
@@ -221,6 +217,25 @@ function showHidden(div, targetClass1, targetClass2) {
         div.setAttribute("Class", targetClass2);
     }
 }
+
+function winModal() {
+    showHidden(winScreen, "hidden", "display");
+    showHidden(winLoseModalContainer, "hidden", "display");
+    showHidden(shadowDiv, "hidden", "display");
+    setTimeout(() => showHidden(winScreen, "display", "hidden"), 5000);
+    setTimeout(() => showHidden(winLoseModalContainer, "display", "hidden"), 5000);
+    setTimeout(() => showHidden(shadowDiv, "display", "hidden"), 5000);
+}
+
+function loseModal() {
+    showHidden(loseScreen, "hidden", "display");
+    showHidden(winLoseModalContainer, "hidden", "display");
+    showHidden(shadowDiv, "hidden", "display");
+    setTimeout(() => showHidden(loseScreen, "display", "hidden"), 5000);
+    setTimeout(() => showHidden(winLoseModalContainer, "display", "hidden"), 5000);
+    setTimeout(() => showHidden(shadowDiv, "display", "hidden"), 5000);
+}
+
 
 
 
